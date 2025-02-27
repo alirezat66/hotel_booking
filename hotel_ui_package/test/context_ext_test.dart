@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:hotel_ui_package/theme/context_ext.dart';
+import 'package:hotel_ui_package/theme/theme.dart';
+
+void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
+
+  group('BuildContextExt', () {
+    testWidgets('extension methods return correct values', (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: HotelBookingTheme.lightTheme,
+          home: Builder(
+            builder: (context) {
+              // Test color scheme
+              expect(context.colorScheme.primary, HotelBookingTheme.lightPrimary);
+              expect(context.colorScheme.surface, HotelBookingTheme.lightSurface);
+              expect(context.colorScheme.onSurface, HotelBookingTheme.foregroundColor);
+
+              // Test text theme
+              expect(context.displayLarge.fontSize, 57);
+              expect(context.displayMedium.fontSize, 45);
+              expect(context.displaySmall.fontSize, 36);
+              expect(context.headlineLarge.fontSize, 32);
+              expect(context.headlineMedium.fontSize, 28);
+              expect(context.headlineSmall.fontSize, 24);
+              expect(context.titleLarge.fontSize, 22);
+              expect(context.titleMedium.fontSize, 16);
+              expect(context.titleSmall.fontSize, 14);
+              expect(context.bodyLarge.fontSize, 16);
+              expect(context.bodyMedium.fontSize, 14);
+              expect(context.bodySmall.fontSize, 12);
+              expect(context.labelLarge.fontSize, 14);
+              expect(context.labelMedium.fontSize, 12);
+              expect(context.labelSmall.fontSize, 11);
+
+              return Container();
+            },
+          ),
+        ),
+      );
+    });
+  });
+}
