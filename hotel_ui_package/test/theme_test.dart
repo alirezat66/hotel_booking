@@ -50,5 +50,13 @@ void main() {
       expect(elevatedButtonTheme?.textStyle?.resolve({})?.fontSize, 14);
       expect(elevatedButtonTheme?.textStyle?.resolve({})?.fontWeight, FontWeight.w700);
     });
+
+    test('lightTheme has correct divider theme', () {
+      final dividerTheme = HotelBookingTheme.lightTheme.dividerTheme;
+
+      expect(dividerTheme.color, HotelBookingTheme.dividerColor);
+      expect(dividerTheme.space, 0);
+      expect(dividerTheme.thickness, 1);
+    });
   });
 }

@@ -1,0 +1,4 @@
+enum HotelCardType{
+  favorite,
+  detailed,
+}

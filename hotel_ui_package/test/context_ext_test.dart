@@ -41,5 +41,22 @@ void main() {
         ),
       );
     });
+
+    testWidgets('extension methods return correct icon theme values', (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: HotelBookingTheme.lightTheme,
+          home: Builder(
+            builder: (context) {
+              // Test icon theme
+              expect(context.theme.iconTheme.color, HotelBookingTheme.iconColor);
+              expect(context.theme.iconTheme.size, 24.0);
+
+              return Container();
+            },
+          ),
+        ),
+      );
+    });
   });
 }

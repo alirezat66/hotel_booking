@@ -8,7 +8,6 @@ extension BuildContextExt on BuildContext {
   Color get primaryColor => theme.colorScheme.primary;
   Color get surface => theme.colorScheme.surface;
   Color get onSurface => theme.colorScheme.onSurface;
-
   TextTheme get textTheme => theme.textTheme;
 
   TextStyle get displayLarge => theme.textTheme.displayLarge!;

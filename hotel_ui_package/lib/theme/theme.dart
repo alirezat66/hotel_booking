@@ -5,10 +5,14 @@ class HotelBookingTheme {
   static const lightSurface = Color(0xFF002873);
   static const lightScaffold = Colors.white;
   static const foregroundColor = Colors.white;
+  static const dividerColor = Color(0xFFE9E9E9);
   static const lightPrimary = Color(0xFFFF8f16);
   static const lightSecondary = Color(0xFF85BC39);
+  static const lightTertiary = Colors.black;
+  static const iconColor = Color(0xFF595959);
   static ThemeData get lightTheme => ThemeData(
         useMaterial3: true,
+        scaffoldBackgroundColor: lightScaffold,
         colorScheme: const ColorScheme(
           brightness: Brightness.light,
           primary: lightPrimary,
@@ -19,24 +23,30 @@ class HotelBookingTheme {
           onError: foregroundColor,
           surface: lightSurface,
           onSurface: foregroundColor,
+          tertiary: lightTertiary,
         ),
         textTheme: _getTextTheme(),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            backgroundColor: lightPrimary,
-            foregroundColor: foregroundColor,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-            textStyle: GoogleFonts.openSans(
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
-              letterSpacing: 0,
-            ),
-          ),
-        ),
+        elevatedButtonTheme: getElevatedButtonTheme(),
+        dividerTheme: _getDividerTheme(),
+        iconTheme: _getIconTheme(),
         visualDensity: VisualDensity.compact,
       );
+
+  static ElevatedButtonThemeData getElevatedButtonTheme() {
+    return ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: lightPrimary,
+        foregroundColor: foregroundColor,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+        textStyle: GoogleFonts.openSans(
+          fontSize: 14,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 0,
+        ),
+      ),
+    );
+  }
 
   static TextTheme _getTextTheme() {
     return TextTheme(
@@ -109,6 +119,21 @@ class HotelBookingTheme {
         fontWeight: FontWeight.w500,
         letterSpacing: 0.5,
       ),
+    );
+  }
+
+  static _getDividerTheme() {
+    return const DividerThemeData(
+      color: dividerColor,
+      space: 0,
+      thickness: 1,
+    );
+  }
+
+  static _getIconTheme() {
+    return const IconThemeData(
+      color: iconColor,
+      size: 24,
     );
   }
 }
