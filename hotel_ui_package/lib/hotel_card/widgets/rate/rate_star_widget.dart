@@ -22,7 +22,8 @@ class RateStarWidget extends StatelessWidget {
     final int fullStars = score.floor();
     final bool hasHalfStar = (score - fullStars) >= 0.5;
     final int emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
-    final Color effectiveColor = starColor ?? context.colorScheme.tertiary;
+    final Color effectiveColor =
+        starColor ?? context.hotelCartTheme.titleTextColor;
 
     return Row(
       mainAxisSize: MainAxisSize.min,

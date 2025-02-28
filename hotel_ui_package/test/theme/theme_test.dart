@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
 import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 import 'package:hotel_ui_package/theme/hotel_cart_theme.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  setUp(() => GoogleFonts.config.allowRuntimeFetching = false);
+
 
   group('HotelBookingTheme', () {
     test('lightTheme has correct color scheme', () {

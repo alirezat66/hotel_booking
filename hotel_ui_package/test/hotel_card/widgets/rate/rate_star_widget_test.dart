@@ -80,7 +80,8 @@ void main() {
 
       final stars = tester.widgetList<Icon>(find.byIcon(Icons.star));
       for (var star in stars) {
-        expect(star.color, Colors.black); // Assuming default color is black
+        expect(star.color,
+            const Color(0xff222222)); // Assuming default color is black
       }
     });
 
@@ -112,7 +113,7 @@ void main() {
       expect(
         () async {
           await tester.pumpWidget(
-             MaterialApp(
+            MaterialApp(
               home: Scaffold(
                 body: RateStarWidget(score: -1.0),
               ),
@@ -125,7 +126,7 @@ void main() {
       expect(
         () async {
           await tester.pumpWidget(
-             MaterialApp(
+            MaterialApp(
               home: Scaffold(
                 body: RateStarWidget(score: 6.0),
               ),

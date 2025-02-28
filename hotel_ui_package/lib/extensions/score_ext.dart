@@ -7,5 +7,4 @@ extension ScoreExtension on double {
   IconData get face => satisfactionLevel.icon;
   Color satisfactionColor(RatingBadgeTheme theme) =>
       satisfactionLevel.getColor(theme);
-  String get scoreText => satisfactionLevel.text;
 }

@@ -62,7 +62,7 @@ WidgetbookComponent getRateStarWidget() {
                       label: 'Score',
                       initialValue: 3.5,
                     ),
-                    reviewCount: 493,
+                    reviewCount: 493, scoreDescription: context.knobs.string(label: 'Score Description', initialValue: 'Sehr Gut'),
                   ),
                 ),
               ),

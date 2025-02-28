@@ -9,9 +9,8 @@ import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
 abstract class SatisfactionLevel {
   final IconData icon;
-  final String text;
 
-  const SatisfactionLevel({required this.icon, required this.text});
+  const SatisfactionLevel({required this.icon,});
 
   /// Determines if the score falls within this level's range
   bool isInRange(double score);

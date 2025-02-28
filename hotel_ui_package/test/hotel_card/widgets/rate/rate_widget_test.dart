@@ -38,16 +38,16 @@ void main() {
     // Define test data
     const double testScore = 4.5;
     const int testReviewCount = 123;
-
+    const String scoreDescription = 'Sehr gut';
     // Build the widget tree
     await tester.pumpWidget(
       const MaterialApp(
         home: Scaffold(
           body: Center(
             child: RateWidget(
-              score: testScore,
-              reviewCount: testReviewCount,
-            ),
+                score: testScore,
+                reviewCount: testReviewCount,
+                scoreDescription: scoreDescription),
           ),
         ),
       ),
@@ -56,7 +56,7 @@ void main() {
     // Verify the RateWidget structure
     expect(find.byType(RateWidget), findsOneWidget);
     expect(find.byType(RatingBadge), findsOneWidget);
-    expect(find.byType(Gap), findsOneWidget);
+    expect(find.byType(Gap), findsAtLeast(2));
     expect(find.byType(RatingDescription), findsOneWidget);
 
     // Verify RatingBadge
@@ -73,10 +73,10 @@ void main() {
     final ratingDescription =
         tester.widget<RatingDescription>(find.byType(RatingDescription));
     expect(ratingDescription.reviewCount, testReviewCount);
-    expect(ratingDescription.scoreText, testScore.scoreText);
+    expect(ratingDescription.scoreText, scoreDescription);
 
     // Verify the formatted text in RatingDescription
-    expect(find.text('${testScore.scoreText} ($testReviewCount Bew)'),
+    expect(find.text('${scoreDescription} ($testReviewCount Bew)'),
         findsOneWidget);
   });
 
@@ -148,7 +148,7 @@ void main() {
       (WidgetTester tester) async {
     const double testScore = 0.0;
     const int testReviewCount = 10;
-
+    const String scoreDescription = 'Sehr gut';
     await tester.pumpWidget(
       const MaterialApp(
         home: Scaffold(
@@ -156,6 +156,7 @@ void main() {
             child: RateWidget(
               score: testScore,
               reviewCount: testReviewCount,
+              scoreDescription: scoreDescription,
             ),
           ),
         ),
@@ -166,6 +167,6 @@ void main() {
     expect(find.text('${testScore.toStringAsFixed(1)} / 5.0'), findsOneWidget);
 
     // Verify the right satisfaction level text is used (should be "Mangelhaft" or similar)
-    expect(find.textContaining(testScore.scoreText), findsOneWidget);
+    expect(find.textContaining(scoreDescription), findsOneWidget);
   });
 }

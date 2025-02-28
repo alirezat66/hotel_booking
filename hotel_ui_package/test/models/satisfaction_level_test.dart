@@ -12,7 +12,7 @@ import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
 // Custom level for testing purposes
 class CustomLevel extends SatisfactionLevel with ScoreRangeBasedLevel {
-  CustomLevel() : super(icon: Icons.star, text: 'Custom');
+  CustomLevel() : super(icon: Icons.star);
 
   @override
   Color getColor(RatingBadgeTheme theme) => Colors.purple;
@@ -174,6 +174,15 @@ void main() {
   });
 
   group('ScoreExtension', () {
+    setUp(() {
+      SatisfactionLevel.setLevels([
+        VeryDissatisfiedLevel(),
+        DissatisfiedLevel(),
+        NeutralLevel(),
+        SatisfiedLevel(),
+        VerySatisfiedLevel(),
+      ]);
+    });
     test('satisfactionLevel returns correct level', () {
       final score = 3.5;
       expect(score.satisfactionLevel, isA<SatisfiedLevel>());
@@ -193,14 +202,6 @@ void main() {
       expect(2.5.satisfactionColor(ratingBadgeTheme), Colors.yellow);
       expect(1.5.satisfactionColor(ratingBadgeTheme), Colors.orange);
       expect(0.5.satisfactionColor(ratingBadgeTheme), Colors.red);
-    });
-
-    test('scoreText returns correct text', () {
-      expect(4.5.scoreText, 'Sehr gut');
-      expect(3.5.scoreText, 'Gut');
-      expect(2.5.scoreText, 'Befriedigend');
-      expect(1.5.scoreText, 'Ausreichend');
-      expect(0.5.scoreText, 'Mangelhaft');
     });
   });
 }

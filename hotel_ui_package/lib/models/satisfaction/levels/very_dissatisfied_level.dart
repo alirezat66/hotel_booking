@@ -6,7 +6,9 @@ import '../satisfaction_level.dart';
 class VeryDissatisfiedLevel extends SatisfactionLevel
     with ScoreRangeBasedLevel {
   VeryDissatisfiedLevel()
-      : super(icon: Icons.sentiment_very_dissatisfied, text: 'Mangelhaft');
+      : super(
+          icon: Icons.sentiment_very_dissatisfied,
+        );
 
   @override
   Color getColor(RatingBadgeTheme theme) => theme.veryDissatisfiedColor;
