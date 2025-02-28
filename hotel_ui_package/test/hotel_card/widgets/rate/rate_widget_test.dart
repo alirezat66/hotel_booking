@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gap/gap.dart';
-import 'package:hotel_ui_package/extensions/score_ext.dart';
 import 'package:hotel_ui_package/hotel_card/widgets/rate/rate_widget.dart';
 import 'package:hotel_ui_package/hotel_card/widgets/rate/rating_badge.dart';
 import 'package:hotel_ui_package/hotel_card/widgets/rate/rating_description.dart';
