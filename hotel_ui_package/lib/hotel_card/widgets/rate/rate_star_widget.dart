@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_ui_package/hotel_card/widgets/info_wodget.dart';
-import 'package:hotel_ui_package/theme/context_ext.dart';
+import 'package:hotel_ui_package/extensions/context_ext.dart';
 
 class RateStarWidget extends StatelessWidget {
   final double score;

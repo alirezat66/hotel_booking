@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
+import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -42,13 +43,18 @@ void main() {
     });
 
     test('lightTheme has correct elevated button theme', () {
-      final elevatedButtonTheme = HotelBookingTheme.lightTheme.elevatedButtonTheme.style;
+      final elevatedButtonTheme =
+          HotelBookingTheme.lightTheme.elevatedButtonTheme.style;
 
-      expect(elevatedButtonTheme?.backgroundColor?.resolve({}), HotelBookingTheme.lightPrimary);
-      expect(elevatedButtonTheme?.foregroundColor?.resolve({}), HotelBookingTheme.foregroundColor);
-      expect(elevatedButtonTheme?.padding?.resolve({}), const EdgeInsets.symmetric(horizontal: 10, vertical: 20));
+      expect(elevatedButtonTheme?.backgroundColor?.resolve({}),
+          HotelBookingTheme.lightPrimary);
+      expect(elevatedButtonTheme?.foregroundColor?.resolve({}),
+          HotelBookingTheme.foregroundColor);
+      expect(elevatedButtonTheme?.padding?.resolve({}),
+          const EdgeInsets.symmetric(horizontal: 10, vertical: 20));
       expect(elevatedButtonTheme?.textStyle?.resolve({})?.fontSize, 14);
-      expect(elevatedButtonTheme?.textStyle?.resolve({})?.fontWeight, FontWeight.w700);
+      expect(elevatedButtonTheme?.textStyle?.resolve({})?.fontWeight,
+          FontWeight.w700);
     });
 
     test('lightTheme has correct divider theme', () {
@@ -57,6 +63,17 @@ void main() {
       expect(dividerTheme.color, HotelBookingTheme.dividerColor);
       expect(dividerTheme.space, 0);
       expect(dividerTheme.thickness, 1);
+    });
+
+    test('lightTheme has correct rating badge theme', () {
+      final theme = HotelBookingTheme.lightTheme;
+      final ratingBadgeTheme = theme.extension<RatingBadgeTheme>()!;
+
+      expect(ratingBadgeTheme.verySatisfiedColor, Colors.green);
+      expect(ratingBadgeTheme.satisfiedColor, const Color(0xFF85BC39));
+      expect(ratingBadgeTheme.neutralColor, Colors.yellow);
+      expect(ratingBadgeTheme.dissatisfiedColor, Colors.orange);
+      expect(ratingBadgeTheme.veryDissatisfiedColor, Colors.red);
     });
   });
 }

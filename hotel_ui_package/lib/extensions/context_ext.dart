@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
 extension BuildContextExt on BuildContext {
   ThemeData get theme => Theme.of(this);
@@ -29,4 +30,14 @@ extension BuildContextExt on BuildContext {
   TextStyle get labelLarge => theme.textTheme.labelLarge!;
   TextStyle get labelMedium => theme.textTheme.labelMedium!;
   TextStyle get labelSmall => theme.textTheme.labelSmall!;
+
+  RatingBadgeTheme get ratingBadgeTheme =>
+      theme.extension<RatingBadgeTheme>() ??
+      const RatingBadgeTheme(
+        verySatisfiedColor: Colors.green,
+        satisfiedColor: Color(0xFF85BC39),
+        neutralColor: Colors.yellow,
+        dissatisfiedColor: Colors.orange,
+        veryDissatisfiedColor: Colors.red,
+      );
 }

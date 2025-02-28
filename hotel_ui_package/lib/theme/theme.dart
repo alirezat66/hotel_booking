@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
 class HotelBookingTheme {
   static const lightSurface = Color(0xFF002873);
@@ -11,26 +12,28 @@ class HotelBookingTheme {
   static const lightTertiary = Colors.black;
   static const iconColor = Color(0xFF595959);
   static ThemeData get lightTheme => ThemeData(
-        useMaterial3: true,
-        scaffoldBackgroundColor: lightScaffold,
-        colorScheme: const ColorScheme(
-          brightness: Brightness.light,
-          primary: lightPrimary,
-          onPrimary: foregroundColor,
-          secondary: lightSecondary,
-          onSecondary: foregroundColor,
-          error: Colors.redAccent,
-          onError: foregroundColor,
-          surface: lightSurface,
-          onSurface: foregroundColor,
-          tertiary: lightTertiary,
-        ),
-        textTheme: _getTextTheme(),
-        elevatedButtonTheme: getElevatedButtonTheme(),
-        dividerTheme: _getDividerTheme(),
-        iconTheme: _getIconTheme(),
-        visualDensity: VisualDensity.compact,
-      );
+          useMaterial3: true,
+          scaffoldBackgroundColor: lightScaffold,
+          colorScheme: const ColorScheme(
+            brightness: Brightness.light,
+            primary: lightPrimary,
+            onPrimary: foregroundColor,
+            secondary: lightSecondary,
+            onSecondary: foregroundColor,
+            error: Colors.redAccent,
+            onError: foregroundColor,
+            surface: lightSurface,
+            onSurface: foregroundColor,
+            tertiary: lightTertiary,
+          ),
+          textTheme: _getTextTheme(),
+          elevatedButtonTheme: getElevatedButtonTheme(),
+          dividerTheme: _getDividerTheme(),
+          iconTheme: _getIconTheme(),
+          visualDensity: VisualDensity.compact,
+          extensions: [
+            _getRatingBadgeTheme(),
+          ]);
 
   static ElevatedButtonThemeData getElevatedButtonTheme() {
     return ElevatedButtonThemeData(
@@ -134,6 +137,16 @@ class HotelBookingTheme {
     return const IconThemeData(
       color: iconColor,
       size: 24,
+    );
+  }
+
+  static RatingBadgeTheme _getRatingBadgeTheme() {
+    return const RatingBadgeTheme(
+      verySatisfiedColor: Colors.green,
+      satisfiedColor: Color(0xFF85BC39),
+      neutralColor: Colors.yellow,
+      dissatisfiedColor: Colors.orange,
+      veryDissatisfiedColor: Colors.red,
     );
   }
 }

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_ui_package/hotel_card/widgets/rate/rate_star_widget.dart';
+import 'package:hotel_ui_package/hotel_card/widgets/rate/rate_widget.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 WidgetbookComponent getRateStarWidget() {
   return WidgetbookComponent(
-    name: 'ShadowedCard',
+    name: 'Rating',
     useCases: [
       WidgetbookUseCase(
-        name: 'Configurable',
+        name: 'Rating Star',
         builder: (context) => Scaffold(
           body: Column(
             mainAxisSize: MainAxisSize.max,
@@ -38,7 +39,34 @@ WidgetbookComponent getRateStarWidget() {
                   )
                       ? () {}
                       : null,
-
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+      WidgetbookUseCase(
+        name: 'Rating Widget',
+        builder: (context) => Scaffold(
+          body: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.blue,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: RateWidget(
+                    score: context.knobs.double.input(
+                      label: 'Score',
+                      initialValue: 3.5,
+                    ),
+                    scoreText: context.knobs.string(
+                      label: 'Score Text',
+                      initialValue: 'Sehr gut',
+                    ),
+                    reviewCount: 493,
+                  ),
                 ),
               ),
             ],

@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_ui_package/theme/context_ext.dart';
+import 'package:hotel_ui_package/extensions/context_ext.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('BuildContextExt', () {
-    testWidgets('extension methods return correct values', (WidgetTester tester) async {
+    testWidgets('extension methods return correct values',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: HotelBookingTheme.lightTheme,
           home: Builder(
             builder: (context) {
               // Test color scheme
-              expect(context.colorScheme.primary, HotelBookingTheme.lightPrimary);
-              expect(context.colorScheme.surface, HotelBookingTheme.lightSurface);
-              expect(context.colorScheme.onSurface, HotelBookingTheme.foregroundColor);
+              expect(
+                  context.colorScheme.primary, HotelBookingTheme.lightPrimary);
+              expect(
+                  context.colorScheme.surface, HotelBookingTheme.lightSurface);
+              expect(context.colorScheme.onSurface,
+                  HotelBookingTheme.foregroundColor);
 
               // Test text theme
               expect(context.displayLarge.fontSize, 57);
@@ -42,15 +46,39 @@ void main() {
       );
     });
 
-    testWidgets('extension methods return correct icon theme values', (WidgetTester tester) async {
+    testWidgets('extension methods return correct icon theme values',
+        (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: HotelBookingTheme.lightTheme,
           home: Builder(
             builder: (context) {
               // Test icon theme
-              expect(context.theme.iconTheme.color, HotelBookingTheme.iconColor);
+              expect(
+                  context.theme.iconTheme.color, HotelBookingTheme.iconColor);
               expect(context.theme.iconTheme.size, 24.0);
+
+              return Container();
+            },
+          ),
+        ),
+      );
+    });
+
+    testWidgets('ratingBadgeTheme returns correct values',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: HotelBookingTheme.lightTheme,
+          home: Builder(
+            builder: (context) {
+              final ratingBadgeTheme = context.ratingBadgeTheme;
+
+              expect(ratingBadgeTheme.verySatisfiedColor, Colors.green);
+              expect(ratingBadgeTheme.satisfiedColor, const Color(0xFF85BC39));
+              expect(ratingBadgeTheme.neutralColor, Colors.yellow);
+              expect(ratingBadgeTheme.dissatisfiedColor, Colors.orange);
+              expect(ratingBadgeTheme.veryDissatisfiedColor, Colors.red);
 
               return Container();
             },

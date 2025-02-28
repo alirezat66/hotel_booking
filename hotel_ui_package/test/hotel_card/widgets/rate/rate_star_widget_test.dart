@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_ui_package/hotel_card/widgets/rate/rate_star_widget.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
 void main() {
