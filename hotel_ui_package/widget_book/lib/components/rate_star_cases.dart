@@ -55,15 +55,12 @@ WidgetbookComponent getRateStarWidget() {
               Container(
                 color: Colors.blue,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 48, vertical: 48),
                   child: RateWidget(
                     score: context.knobs.double.input(
                       label: 'Score',
                       initialValue: 3.5,
-                    ),
-                    scoreText: context.knobs.string(
-                      label: 'Score Text',
-                      initialValue: 'Sehr gut',
                     ),
                     reviewCount: 493,
                   ),
