@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_ui_package/hotel_card/widgets/info_wodget.dart';
+import 'package:hotel_ui_package/hotel_card/widgets/more_info_cta.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -11,7 +11,7 @@ void main() {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: InfoWidget(),
+            body: MoreInfoCta(),
           ),
         ),
       );
@@ -26,7 +26,7 @@ void main() {
       await tester.pumpWidget(
         const MaterialApp(
           home: Scaffold(
-            body: InfoWidget(size: 30.0),
+            body: MoreInfoCta(size: 30.0),
           ),
         ),
       );
@@ -43,7 +43,7 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: Scaffold(
-            body: InfoWidget(
+            body: MoreInfoCta(
               onTap: () {
                 tapped = true;
               },

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
 import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
+import 'package:hotel_ui_package/theme/hotel_cart_theme.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -75,5 +76,13 @@ void main() {
       expect(ratingBadgeTheme.dissatisfiedColor, Colors.orange);
       expect(ratingBadgeTheme.veryDissatisfiedColor, Colors.red);
     });
+  });
+
+  test('HotelCartTheme properties are correct', () {
+    final ThemeData theme = HotelBookingTheme.lightTheme;
+    final HotelCartTheme hotelCartTheme = theme.extension<HotelCartTheme>()!;
+
+    expect(hotelCartTheme.titleTextColor, const Color(0xFF222222));
+    expect(hotelCartTheme.subtitleTextColor, const Color(0xFF595959));
   });
 }

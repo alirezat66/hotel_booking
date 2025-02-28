@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class InfoWidget extends StatelessWidget {
+class MoreInfoCta extends StatelessWidget {
   final VoidCallback? onTap;
   final double? size;
-  const InfoWidget({super.key, this.onTap, this.size});
+  const MoreInfoCta({super.key, this.onTap, this.size});
 
   @override
   Widget build(BuildContext context) {

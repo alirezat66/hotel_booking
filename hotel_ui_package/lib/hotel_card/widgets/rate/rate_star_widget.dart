@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_ui_package/hotel_card/widgets/info_wodget.dart';
+import 'package:hotel_ui_package/hotel_card/widgets/more_info_cta.dart';
 import 'package:hotel_ui_package/extensions/context_ext.dart';
 
 class RateStarWidget extends StatelessWidget {
@@ -53,7 +53,7 @@ class RateStarWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(
               horizontal: 4,
             ),
-            child: InfoWidget(
+            child: MoreInfoCta(
               size: size,
               onTap: onMoreInfoTab,
             ),

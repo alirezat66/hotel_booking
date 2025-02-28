@@ -86,5 +86,24 @@ void main() {
         ),
       );
     });
+
+    testWidgets('hotelCartTheme returns correct values',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          theme: HotelBookingTheme.lightTheme,
+          home: Builder(
+            builder: (context) {
+              final hotelCartTheme = context.hotelCartTheme;
+
+              expect(hotelCartTheme.titleTextColor, const Color(0xFF222222));
+              expect(hotelCartTheme.subtitleTextColor, const Color(0xFF595959));
+
+              return const SizedBox.shrink();
+            },
+          ),
+        ),
+      );
+    });
   });
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotel_ui_package/theme/hotel_cart_theme.dart';
 import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
 class HotelBookingTheme {
@@ -11,6 +12,10 @@ class HotelBookingTheme {
   static const lightSecondary = Color(0xFF85BC39);
   static const lightTertiary = Colors.black;
   static const iconColor = Color(0xFF595959);
+  static const HotelCartTheme hotelCartTheme = HotelCartTheme(
+    titleTextColor: Color(0xFF222222),
+    subtitleTextColor: Color(0xFF595959),
+  );
   static ThemeData get lightTheme => ThemeData(
           useMaterial3: true,
           scaffoldBackgroundColor: lightScaffold,
@@ -33,6 +38,8 @@ class HotelBookingTheme {
           visualDensity: VisualDensity.compact,
           extensions: [
             _getRatingBadgeTheme(),
+            _getHotelCartTheme(),
+            hotelCartTheme,
           ]);
 
   static ElevatedButtonThemeData getElevatedButtonTheme() {
@@ -147,6 +154,13 @@ class HotelBookingTheme {
       neutralColor: Colors.yellow,
       dissatisfiedColor: Colors.orange,
       veryDissatisfiedColor: Colors.red,
+    );
+  }
+
+  static HotelCartTheme _getHotelCartTheme() {
+    return const HotelCartTheme(
+      titleTextColor: Color(0xFF222222),
+      subtitleTextColor: Color(0xFF595959),
     );
   }
 }
