@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
-class HotelInfoHeader extends StatelessWidget {
+class HotelGeneralInfo extends StatelessWidget {
   final double score;
   final VoidCallback? onMoreInfoTab;
   final String hotelName;
   final String hotelAddress;
-  const HotelInfoHeader({
+  const HotelGeneralInfo({
     super.key,
     this.onMoreInfoTab,
     required this.hotelName,

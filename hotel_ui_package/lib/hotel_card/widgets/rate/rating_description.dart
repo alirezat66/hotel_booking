@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_ui_package/extensions/context_ext.dart';
+import 'package:hotel_ui_package/extensions/theme_ext.dart';
 
 class RatingDescription extends StatelessWidget {
   final String scoreText;

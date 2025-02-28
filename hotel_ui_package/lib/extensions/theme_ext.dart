@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hotel_ui_package/theme/hotel_cart_theme.dart';
 import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
-extension BuildContextExt on BuildContext {
+extension ThemeExtension on BuildContext {
   ThemeData get theme => Theme.of(this);
 
   ColorScheme get colorScheme => theme.colorScheme;

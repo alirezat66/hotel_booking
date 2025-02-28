@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_ui_package/extensions/context_ext.dart';
+import 'package:hotel_ui_package/extensions/theme_ext.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
 
 void main() {
