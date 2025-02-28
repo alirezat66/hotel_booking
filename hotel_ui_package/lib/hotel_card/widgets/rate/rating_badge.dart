@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:hotel_ui_package/extensions/score_ext.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
@@ -27,6 +28,7 @@ class RatingBadge extends StatelessWidget {
               color: context.onSurface,
               size: 14,
             ),
+            const Gap(4),
             Text(
               '${score.toStringAsFixed(1)} / 5.0',
               style: context.titleMedium.copyWith(
