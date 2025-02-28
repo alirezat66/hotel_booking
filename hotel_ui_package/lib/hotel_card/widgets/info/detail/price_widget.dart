@@ -20,6 +20,7 @@ class PriceWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text.rich(
           TextSpan(
@@ -38,6 +39,7 @@ class PriceWidget extends StatelessWidget {
                 style: context.bodySmall.copyWith(
                   color: context.hotelCartTheme.titleTextColor,
                   fontSize: 20,
+                  fontWeight: FontWeight.w700,
                 ),
               ),
             ],

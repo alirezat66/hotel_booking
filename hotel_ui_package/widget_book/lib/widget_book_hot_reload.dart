@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
-import 'package:widget_book_hotel_ui/components/rate_star_cases.dart';
+import 'package:widget_book_hotel_ui/components/detail_info_cases.dart';
+import 'package:widget_book_hotel_ui/components/rate_cases.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 class WidgetbookHotReload extends StatelessWidget {
@@ -25,7 +26,12 @@ class WidgetbookHotReload extends StatelessWidget {
           name: 'RateStar Widget',
           children: [
             getRateStarWidget(),
-            // Add more components here when you create them
+          ],
+        ),
+        WidgetbookFolder(
+          name: 'Info Widget',
+          children: [
+            getInfo(),
           ],
         ),
       ],
@@ -33,6 +39,11 @@ class WidgetbookHotReload extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: HotelBookingTheme.lightTheme,
+          locale: const Locale('de', 'DE'),
+          supportedLocales: const [
+            Locale('en', 'US'),
+            Locale('de', 'DE'),
+          ],
           home: child,
         );
       },

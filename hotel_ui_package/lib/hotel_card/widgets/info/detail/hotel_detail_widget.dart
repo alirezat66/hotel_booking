@@ -43,28 +43,30 @@ class HotelDetailWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: TravelInfoWidget(
-            dateInfo: [
+    return IntrinsicHeight(
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: TravelInfoWidget(dateInfo: [
               '$days $dayText',
               '$nights $nightText',
-            ],
-            roomInfo: [overallName, overallBoarding],
-            overallInfo: [
+            ], roomInfo: [
+              overallName,
+              overallBoarding
+            ], overallInfo: [
               '$adults Erw., $kids Kinder',
-              isIncludeFlight ? includeFlightText : ''
-            ],
+              if (isIncludeFlight) includeFlightText
+            ],),
           ),
-        ),
-        PriceWidget(
-          perPersonPrice: perPersonPrice,
-          totalPrice: totalPrice,
-          currency: currency,
-          fromText: hasMoreOneOffer ? fromText : null,
-        )
-      ],
+          PriceWidget(
+            perPersonPrice: perPersonPrice,
+            totalPrice: totalPrice,
+            currency: currency,
+            fromText: hasMoreOneOffer ? fromText : null,
+          )
+        ],
+      ),
     );
   }
 }
