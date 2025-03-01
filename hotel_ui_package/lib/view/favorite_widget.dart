@@ -63,7 +63,7 @@ class FavoriteWidgetState extends State<FavoriteWidget>
                     size: widget.size,
                     color: widget.initialState
                         ? context.hotelCartTheme.favoriteIconSelectedColor
-                        : context.hotelCartTheme.favoriteIconSelectedColor,
+                        : context.hotelCartTheme.favoriteIconDeselectedColor,
                   ),
                 );
               }),
