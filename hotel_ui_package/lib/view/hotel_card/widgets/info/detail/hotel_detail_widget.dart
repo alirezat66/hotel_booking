@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_ui_package/hotel_card/widgets/info/detail/price_widget.dart';
-import 'package:hotel_ui_package/hotel_card/widgets/info/detail/travel_info_widget.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/info/detail/price_widget.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/info/detail/travel_info_widget.dart';
 
 class HotelDetailWidget extends StatelessWidget {
   final int days;

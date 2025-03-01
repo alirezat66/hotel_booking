@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_ui_package/hotel_card/widgets/more_info_cta.dart';
+import 'package:hotel_ui_package/view/more_info_cta.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();

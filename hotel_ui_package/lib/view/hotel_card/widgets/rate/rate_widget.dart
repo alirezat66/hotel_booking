@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:hotel_ui_package/hotel_card/widgets/rate/rating_badge.dart';
-import 'package:hotel_ui_package/hotel_card/widgets/rate/rating_description.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/rate/rating_badge.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/rate/rating_description.dart';
 
 class RateWidget extends StatelessWidget {
   final double score;
