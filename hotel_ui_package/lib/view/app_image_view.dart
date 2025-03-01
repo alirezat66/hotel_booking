@@ -25,21 +25,16 @@ class AppImageView extends StatelessWidget {
         child: CachedNetworkImage(
           imageUrl: url,
           fit: BoxFit.cover,
-          progressIndicatorBuilder: (context, url, downloadProgress) => SizedBox(
+          progressIndicatorBuilder: (context, url, downloadProgress) =>
+              SizedBox(
             width: 48,
             height: 48,
             child: loadingWidget ??
                 CircularProgressIndicator.adaptive(
                     value: downloadProgress.progress),
           ),
-          errorWidget: (context, url, error) => Column(
-            children: [
-              errorWidget ?? const Icon(Icons.error),
-              Text(
-                error.toString(),
-                style: context.bodySmall.copyWith(color: Colors.black),
-              )
-            ],
+          errorWidget: (context, url, error) => Center(
+            child: errorWidget ?? const Icon(Icons.error),
           ),
         ),
       ),
