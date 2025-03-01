@@ -6,3 +6,4 @@ export 'view/hotel_cart/widgets/info/detail/hotel_detail_widget.dart';
 export 'view/hotel_cart/widgets/info/general/hotel_general_info_widget.dart';
 export 'view/favorite_widget.dart';
 export 'view/app_image_view.dart';
+export 'view/hotel_cart/widgets/hotel_image_view.dart';
