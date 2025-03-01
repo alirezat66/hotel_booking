@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_ui_package/view/hotel_card/widgets/info/detail/travel_info_widget.dart';
-import 'package:hotel_ui_package/view/hotel_card/widgets/info_row_widget.dart';
+import 'package:hotel_ui_package/view/hotel_cart/widgets/info/detail/travel_info_widget.dart';
+import 'package:hotel_ui_package/view/hotel_cart/widgets/info_row_widget.dart';
 
 void main() {
   testWidgets('TravelInfoWidget displays date, room, and overall info', (WidgetTester tester) async {

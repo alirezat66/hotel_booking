@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:hotel_ui_package/extensions/theme_ext.dart';
 
 class AppImageView extends StatelessWidget {
   final String url;

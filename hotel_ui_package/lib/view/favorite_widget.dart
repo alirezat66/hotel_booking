@@ -13,15 +13,15 @@ class FavoriteWidget extends StatefulWidget {
   });
 
   @override
-  State<FavoriteWidget> createState() => _FavoriteWidgetState();
+  State<FavoriteWidget> createState() => FavoriteWidgetState();
 }
 
-class _FavoriteWidgetState extends State<FavoriteWidget>
+class FavoriteWidgetState extends State<FavoriteWidget>
     with TickerProviderStateMixin {
-  late AnimationController _vibrationController;
-  late Animation<double> _vibrationAnimation;
-  late AnimationController _circleController;
-  late Animation<double> _circleAnimation;
+  late AnimationController vibrationController;
+  late Animation<double> vibrationAnimation;
+  late AnimationController circleController;
+  late Animation<double> circleAnimation;
 
   @override
   void initState() {
@@ -32,8 +32,8 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
 
   @override
   void dispose() {
-    _vibrationController.dispose();
-    _circleController.dispose();
+    vibrationController.dispose();
+    circleController.dispose();
     super.dispose();
   }
 
@@ -52,10 +52,10 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
         alignment: Alignment.center,
         children: [
           AnimatedBuilder(
-              animation: _vibrationAnimation,
+              animation: vibrationAnimation,
               builder: (context, build) {
                 return Transform.scale(
-                  scale: _vibrationAnimation.value,
+                  scale: vibrationAnimation.value,
                   child: Icon(
                     widget.initialState
                         ? Icons.favorite
@@ -68,11 +68,11 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
                 );
               }),
           AnimatedBuilder(
-            animation: _circleAnimation,
+            animation: circleAnimation,
             builder: (context, build) {
               return Container(
-                width: _circleAnimation.value,
-                height: _circleAnimation.value,
+                width: circleAnimation.value,
+                height: circleAnimation.value,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.fromBorderSide(BorderSide(
@@ -89,32 +89,32 @@ class _FavoriteWidgetState extends State<FavoriteWidget>
   }
 
   void _runLikeAnimation() async {
-    await _circleController.forward();
-    await _circleController.reverse();
+    await circleController.forward();
+    await circleController.reverse();
 
     for (int i = 0; i < 3; i++) {
-      await _vibrationController.forward();
-      await _vibrationController.reverse();
+      await vibrationController.forward();
+      await vibrationController.reverse();
     }
   }
 
   void _initVibrationAnimation() {
-    _vibrationController = AnimationController(
+    vibrationController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 100),
     );
 
-    _vibrationAnimation =
-        Tween<double>(begin: 1.0, end: 1.1).animate(_vibrationController);
+    vibrationAnimation =
+        Tween<double>(begin: 1.0, end: 1.1).animate(vibrationController);
   }
 
   void _initCircleAnimation() {
-    _circleController = AnimationController(
+    circleController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 300),
     );
 
-    _circleAnimation =
-        Tween<double>(begin: 0, end: 30).animate(_circleController);
+    circleAnimation =
+        Tween<double>(begin: 0, end: 30).animate(circleController);
   }
 }

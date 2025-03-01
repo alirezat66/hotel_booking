@@ -36,7 +36,6 @@ class HotelBookingTheme {
           extensions: [
             _getRatingBadgeTheme(),
             _getHotelCartTheme(),
-            _getHotelCartTheme(),
           ]);
 
   static ElevatedButtonThemeData getElevatedButtonTheme() {
