@@ -6,13 +6,13 @@ class AppImageView extends StatelessWidget {
   final double aspectRatio;
   final Widget? errorWidget;
   final Widget? loadingWidget;
-  final double boarderRadius;
+  final BorderRadius? boarderRadius;
   const AppImageView(
       {super.key,
       required this.url,
       this.aspectRatio = 343 / 186,
       this.errorWidget,
-      this.boarderRadius = 4,
+      this.boarderRadius,
       this.loadingWidget});
 
   @override
@@ -20,7 +20,7 @@ class AppImageView extends StatelessWidget {
     return AspectRatio(
       aspectRatio: aspectRatio,
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(boarderRadius),
+        borderRadius: boarderRadius ?? BorderRadius.circular(0),
         child: CachedNetworkImage(
           imageUrl: url,
           fit: BoxFit.cover,

@@ -20,7 +20,8 @@ class HotelImageView extends StatelessWidget {
         AppImageView(
           url: url,
           aspectRatio: aspectRatio,
-          boarderRadius: 0,
+          boarderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(5), topRight: Radius.circular(5)),
         ),
         Positioned(
           bottom: 16,

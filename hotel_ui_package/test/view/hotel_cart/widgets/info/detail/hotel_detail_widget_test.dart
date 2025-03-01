@@ -37,7 +37,7 @@ void main() {
             overallBoarding: overallBoarding,
             kids: kids,
             adults: adults,
-            isIncludeFlight: isIncludeFlight,
+            isFlightIncluded: isIncludeFlight,
             totalPrice: totalPrice,
             perPersonPrice: perPersonPrice,
             hasMoreOneOffer: hasMoreOneOffer,

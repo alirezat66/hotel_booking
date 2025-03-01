@@ -6,11 +6,13 @@ class HotelCardTheme extends ThemeExtension<HotelCardTheme> {
   final Color subtitleTextColor;
   final Color favoriteIconSelectedColor;
   final Color favoriteIconDeselectedColor;
+  final BoxDecoration cardDecoration;
   const HotelCardTheme({
     required this.titleTextColor,
     required this.subtitleTextColor,
     required this.favoriteIconDeselectedColor,
     required this.favoriteIconSelectedColor,
+    required this.cardDecoration,
   });
 
   @override
@@ -23,6 +25,7 @@ class HotelCardTheme extends ThemeExtension<HotelCardTheme> {
       subtitleTextColor: subTitleTextColor ?? this.subtitleTextColor,
       favoriteIconDeselectedColor: favoriteIconDeselectedColor,
       favoriteIconSelectedColor: favoriteIconSelectedColor,
+      cardDecoration: cardDecoration,
     );
   }
 
@@ -37,6 +40,8 @@ class HotelCardTheme extends ThemeExtension<HotelCardTheme> {
           favoriteIconSelectedColor, other.favoriteIconSelectedColor, t)!,
       favoriteIconDeselectedColor: Color.lerp(
           favoriteIconDeselectedColor, other.favoriteIconDeselectedColor, t)!,
+      cardDecoration:
+          BoxDecoration.lerp(cardDecoration, other.cardDecoration, t)!,
     );
   }
 }

@@ -30,7 +30,7 @@ void main() {
         home: Scaffold(
           body: AppImageView(
             url: testUrl,
-            boarderRadius: testBorderRadius,
+            boarderRadius: BorderRadius.all(Radius.circular(testBorderRadius)),
           ),
         ),
       ),
@@ -65,5 +65,4 @@ void main() {
     final loadingWidgetFinder = find.byType(CircularProgressIndicator);
     expect(loadingWidgetFinder, findsOneWidget);
   });
-
 }

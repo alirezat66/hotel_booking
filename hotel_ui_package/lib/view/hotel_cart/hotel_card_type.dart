@@ -1,0 +1,4 @@
+enum HotelCardType {
+  detailed,
+  compact;
+}

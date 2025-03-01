@@ -11,7 +11,7 @@ class HotelDetailWidget extends StatelessWidget {
 
   final int kids;
   final int adults;
-  final bool isIncludeFlight;
+  final bool isFlightIncluded;
 
   final double totalPrice;
   final double perPersonPrice;
@@ -30,7 +30,7 @@ class HotelDetailWidget extends StatelessWidget {
     required this.overallBoarding,
     required this.kids,
     required this.adults,
-    required this.isIncludeFlight,
+    required this.isFlightIncluded,
     required this.totalPrice,
     required this.perPersonPrice,
     required this.hasMoreOneOffer,
@@ -56,7 +56,7 @@ class HotelDetailWidget extends StatelessWidget {
               overallBoarding
             ], overallInfo: [
               '$adults Erw., $kids Kinder',
-              if (isIncludeFlight) includeFlightText
+              if (isFlightIncluded) includeFlightText
             ],),
           ),
           PriceWidget(

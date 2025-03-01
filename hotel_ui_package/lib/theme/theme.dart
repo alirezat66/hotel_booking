@@ -32,6 +32,7 @@ class HotelBookingTheme {
           elevatedButtonTheme: getElevatedButtonTheme(),
           dividerTheme: _getDividerTheme(),
           iconTheme: _getIconTheme(),
+          cardTheme: _getCardTheme(),
           visualDensity: VisualDensity.compact,
           extensions: [
             _getRatingBadgeTheme(),
@@ -42,7 +43,9 @@ class HotelBookingTheme {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: lightPrimary,
-        foregroundColor: foregroundColor,
+        foregroundColor: Colors.white,
+        disabledBackgroundColor: Colors.grey,
+        disabledForegroundColor: Colors.black,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         textStyle: GoogleFonts.openSans(
@@ -154,11 +157,38 @@ class HotelBookingTheme {
   }
 
   static HotelCardTheme _getHotelCartTheme() {
-    return const HotelCardTheme(
-      titleTextColor: Color(0xFF222222),
-      subtitleTextColor: Color(0xFF595959),
+    return HotelCardTheme(
+      titleTextColor: const Color(0xFF222222),
+      subtitleTextColor: const Color(0xFF595959),
       favoriteIconDeselectedColor: Colors.white,
       favoriteIconSelectedColor: Colors.redAccent,
+      cardDecoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(5),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.1), // #000000 opacity 10%
+            offset: const Offset(0, 8), // X: 0, Y: 8
+            blurRadius: 24,
+            spreadRadius: 0,
+          ),
+          BoxShadow(
+            color: Colors.black.withOpacity(0.08), // #000000 opacity 8%
+            offset: const Offset(0, 0), // X: 0, Y: 0
+            blurRadius: 24,
+            spreadRadius: 0,
+          ),
+        ],
+      ),
+    );
+  }
+
+  static CardTheme _getCardTheme() {
+    return CardTheme(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(5),
+      ),
     );
   }
 }

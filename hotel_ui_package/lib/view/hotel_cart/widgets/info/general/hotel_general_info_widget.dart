@@ -6,12 +6,12 @@ class HotelGeneralInfoWidget extends StatelessWidget {
   final double score;
   final VoidCallback? onMoreInfoTab;
   final String hotelName;
-  final String hotelAddress;
+  final String destination;
   const HotelGeneralInfoWidget({
     super.key,
     this.onMoreInfoTab,
     required this.hotelName,
-    required this.hotelAddress,
+    required this.destination,
     required this.score,
   });
 
@@ -31,7 +31,7 @@ class HotelGeneralInfoWidget extends StatelessWidget {
         ),
         const Gap(2),
         Text(
-          hotelAddress,
+          destination,
           style: context.bodySmall.copyWith(
             color: context.hotelCartTheme.subtitleTextColor,
           ),

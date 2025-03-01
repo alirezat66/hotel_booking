@@ -44,7 +44,7 @@ WidgetbookComponent getInfo() {
                       label: 'Adults',
                       initialValue: 2,
                     ),
-                    isIncludeFlight: context.knobs.boolean(
+                    isFlightIncluded: context.knobs.boolean(
                       label: 'Include Flight',
                       initialValue: true,
                     ),
@@ -93,7 +93,7 @@ WidgetbookComponent getInfo() {
                       label: 'Hotel Name',
                       initialValue: 'Hotel AluaVillage Blue Beach',
                     ),
-                    hotelAddress: context.knobs.string(
+                    destination: context.knobs.string(
                       label: 'Address',
                       initialValue: 'Playa de Esquinzo, Fuerteventura, Spanien',
                     ),

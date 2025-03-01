@@ -20,7 +20,7 @@ void main() {
           body: HotelGeneralInfoWidget(
             score: score,
             hotelName: hotelName,
-            hotelAddress: hotelAddress,
+            destination: hotelAddress,
             onMoreInfoTab: onMoreInfoTab,
           ),
         ),

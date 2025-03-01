@@ -54,10 +54,11 @@ WidgetbookComponent getImageWidgets() {
                   elevation: 4,
                   color: Colors.white,
                   child: AppImageView(
-                    boarderRadius: context.knobs.double.input(
+                    boarderRadius: BorderRadius.all(
+                        Radius.circular(context.knobs.double.input(
                       label: 'Boarder Radius',
                       initialValue: 4,
-                    ),
+                    ))),
                     url: context.knobs.string(
                       label: 'URL Link',
                       initialValue:

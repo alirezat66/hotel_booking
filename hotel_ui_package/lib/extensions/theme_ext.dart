@@ -43,10 +43,27 @@ extension ThemeExtension on BuildContext {
       );
   HotelCardTheme get hotelCartTheme =>
       theme.extension<HotelCardTheme>() ??
-      const HotelCardTheme(
-        titleTextColor: Color(0xFF222222),
-        subtitleTextColor: Color(0xFF595959),
-        favoriteIconDeselectedColor: Colors.white,
-        favoriteIconSelectedColor: Colors.redAccent,
-      );
+      HotelCardTheme(
+          titleTextColor: const Color(0xFF222222),
+          subtitleTextColor: const Color(0xFF595959),
+          favoriteIconDeselectedColor: Colors.white,
+          favoriteIconSelectedColor: Colors.redAccent,
+          cardDecoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(5),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1), // #000000 opacity 10%
+                offset: const Offset(0, 8), // X: 0, Y: 8
+                blurRadius: 24,
+                spreadRadius: 0,
+              ),
+              BoxShadow(
+                color: Colors.black.withOpacity(0.08), // #000000 opacity 8%
+                offset: const Offset(0, 0), // X: 0, Y: 0
+                blurRadius: 24,
+                spreadRadius: 0,
+              ),
+            ],
+          ));
 }
