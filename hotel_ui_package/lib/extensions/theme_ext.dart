@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotel_ui_package/theme/hotel_cart_theme.dart';
+import 'package:hotel_ui_package/theme/hotel_card_theme.dart';
 import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
 extension ThemeExtension on BuildContext {
@@ -41,10 +41,12 @@ extension ThemeExtension on BuildContext {
         dissatisfiedColor: Colors.orange,
         veryDissatisfiedColor: Colors.red,
       );
-  HotelCartTheme get hotelCartTheme =>
-      theme.extension<HotelCartTheme>() ??
-      const HotelCartTheme(
+  HotelCardTheme get hotelCartTheme =>
+      theme.extension<HotelCardTheme>() ??
+      const HotelCardTheme(
         titleTextColor: Color(0xFF222222),
         subtitleTextColor: Color(0xFF595959),
+        favoriteIconDeselectedColor: Colors.white,
+        favoriteIconSelectedColor: Colors.redAccent,
       );
 }

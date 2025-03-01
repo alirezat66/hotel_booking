@@ -41,6 +41,8 @@ dependencies:
   widgetbook: ^3.11.0
   widgetbook_annotation: ^3.3.0
   widgetbook_generator: ^3.10.0
+  flutter_localizations:
+    sdk: flutter
 dev_dependencies:
   flutter_test:
     sdk: flutter

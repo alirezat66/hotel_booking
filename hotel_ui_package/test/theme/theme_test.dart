@@ -3,12 +3,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
 import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
-import 'package:hotel_ui_package/theme/hotel_cart_theme.dart';
+import 'package:hotel_ui_package/theme/hotel_card_theme.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() => GoogleFonts.config.allowRuntimeFetching = false);
-
 
   group('HotelBookingTheme', () {
     test('lightTheme has correct color scheme', () {
@@ -83,9 +82,11 @@ void main() {
 
   test('HotelCartTheme properties are correct', () {
     final ThemeData theme = HotelBookingTheme.lightTheme;
-    final HotelCartTheme hotelCartTheme = theme.extension<HotelCartTheme>()!;
+    final HotelCardTheme hotelCartTheme = theme.extension<HotelCardTheme>()!;
 
     expect(hotelCartTheme.titleTextColor, const Color(0xFF222222));
     expect(hotelCartTheme.subtitleTextColor, const Color(0xFF595959));
+    expect(hotelCartTheme.favoriteIconSelectedColor, Colors.redAccent);
+    expect(hotelCartTheme.favoriteIconDeselectedColor, Colors.white);
   });
 }
