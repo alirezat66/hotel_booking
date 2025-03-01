@@ -22,7 +22,7 @@ WidgetbookComponent getRateStarWidget() {
                   ),
                   starColor: context.knobs.colorOrNull(
                     label: 'Star Color',
-                    initialValue: null,
+                    initialValue: const Color(0xFF000000),
                   ),
                   size: context.knobs.double.input(
                     label: 'Size',
@@ -61,7 +61,9 @@ WidgetbookComponent getRateStarWidget() {
                       label: 'Score',
                       initialValue: 3.5,
                     ),
-                    reviewCount: 493, scoreDescription: context.knobs.string(label: 'Score Description', initialValue: 'Sehr Gut'),
+                    reviewCount: 493,
+                    scoreDescription: context.knobs.string(
+                        label: 'Score Description', initialValue: 'Sehr Gut'),
                   ),
                 ),
               ),
