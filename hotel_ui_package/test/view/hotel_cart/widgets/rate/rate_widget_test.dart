@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:gap/gap.dart';
-import 'package:hotel_ui_package/view/hotel_cart/widgets/rate/rate_widget.dart';
-import 'package:hotel_ui_package/view/hotel_cart/widgets/rate/rating_badge.dart';
-import 'package:hotel_ui_package/view/hotel_cart/widgets/rate/rating_description.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/rate/rate_widget.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/rate/rating_badge.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/rate/rating_description.dart';
 import 'package:hotel_ui_package/models/satisfaction/satisfaction_level.dart';
 import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 import 'package:hotel_ui_package/theme/theme.dart';

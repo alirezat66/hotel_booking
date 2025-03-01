@@ -36,7 +36,7 @@ class HotelBookingTheme {
           visualDensity: VisualDensity.compact,
           extensions: [
             _getRatingBadgeTheme(),
-            _getHotelCartTheme(),
+            _getHotelCardTheme(),
           ]);
 
   static ElevatedButtonThemeData getElevatedButtonTheme() {
@@ -156,7 +156,7 @@ class HotelBookingTheme {
     );
   }
 
-  static HotelCardTheme _getHotelCartTheme() {
+  static HotelCardTheme _getHotelCardTheme() {
     return HotelCardTheme(
       titleTextColor: const Color(0xFF222222),
       subtitleTextColor: const Color(0xFF595959),

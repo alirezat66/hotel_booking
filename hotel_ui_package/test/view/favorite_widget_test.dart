@@ -8,7 +8,7 @@ class MockHotelCardTheme {
 }
 
 extension MockThemeExtension on BuildContext {
-  MockHotelCardTheme get hotelCartTheme => MockHotelCardTheme();
+  MockHotelCardTheme get hotelCardTheme => MockHotelCardTheme();
 }
 
 void main() {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:hotel_ui_package/view/hotel_cart/widgets/info_row_widget.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/info_row_widget.dart';
 
 class TravelInfoWidget extends StatelessWidget {
   final List<String> dateInfo;

@@ -87,17 +87,17 @@ void main() {
       );
     });
 
-    testWidgets('hotelCartTheme returns correct values',
+    testWidgets('hotelCardTheme returns correct values',
         (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
           theme: HotelBookingTheme.lightTheme,
           home: Builder(
             builder: (context) {
-              final hotelCartTheme = context.hotelCartTheme;
+              final hotelCardTheme = context.hotelCardTheme;
 
-              expect(hotelCartTheme.titleTextColor, const Color(0xFF222222));
-              expect(hotelCartTheme.subtitleTextColor, const Color(0xFF595959));
+              expect(hotelCardTheme.titleTextColor, const Color(0xFF222222));
+              expect(hotelCardTheme.subtitleTextColor, const Color(0xFF595959));
 
               return const SizedBox.shrink();
             },

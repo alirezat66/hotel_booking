@@ -10,7 +10,7 @@ class InfoRowWidget extends StatelessWidget {
     return Text(
       items.join(" | "), // Joins all items with " | "
       style: context.bodySmall.copyWith(
-        color: context.hotelCartTheme.subtitleTextColor,
+        color: context.hotelCardTheme.subtitleTextColor,
       ),
     );
   }

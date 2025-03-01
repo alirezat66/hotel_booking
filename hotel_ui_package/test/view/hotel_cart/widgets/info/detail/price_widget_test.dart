@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_ui_package/view/hotel_cart/widgets/info/detail/price_widget.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/info/detail/price_widget.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
 
 void main() {

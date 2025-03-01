@@ -28,7 +28,7 @@ class PriceWidget extends StatelessWidget {
               TextSpan(
                 text: fromText != null ? '$fromText ' : '',
                 style: context.bodySmall.copyWith(
-                  color: context.hotelCartTheme.titleTextColor,
+                  color: context.hotelCardTheme.titleTextColor,
                 ),
               ),
               TextSpan(
@@ -37,7 +37,7 @@ class PriceWidget extends StatelessWidget {
                   currency,
                 ),
                 style: context.bodySmall.copyWith(
-                  color: context.hotelCartTheme.titleTextColor,
+                  color: context.hotelCardTheme.titleTextColor,
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                 ),
@@ -48,7 +48,7 @@ class PriceWidget extends StatelessWidget {
         Text(
           perPersonPrice.formattedPerPersonPrice(context.localeCode, currency),
           style: context.bodySmall.copyWith(
-            color: context.hotelCartTheme.subtitleTextColor,
+            color: context.hotelCardTheme.subtitleTextColor,
           ),
         )
       ],

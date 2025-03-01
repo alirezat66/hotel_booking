@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
-import 'package:hotel_ui_package/view/hotel_cart/card_strategy/hotel_card_factory.dart';
+import 'package:hotel_ui_package/view/hotel_card/card_strategy/hotel_card_factory.dart';
 
 class HotelCard extends StatelessWidget {
   final HotelCardType cardType;
@@ -19,7 +19,7 @@ class HotelCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: context.hotelCartTheme.cardDecoration,
+      decoration: context.hotelCardTheme.cardDecoration,
       child: Card(
           margin: EdgeInsets.zero,
           shape: RoundedRectangleBorder(

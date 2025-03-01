@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_ui_package/view/hotel_cart/widgets/hotel_image_view.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/hotel_image_view.dart';
 import 'package:hotel_ui_package/view/favorite_widget.dart';
-import 'package:hotel_ui_package/view/hotel_cart/widgets/rate/rate_widget.dart';
+import 'package:hotel_ui_package/view/hotel_card/widgets/rate/rate_widget.dart';
 import 'package:hotel_ui_package/view/app_image_view.dart';
 
 void main() {

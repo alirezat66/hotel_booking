@@ -80,13 +80,13 @@ void main() {
     });
   });
 
-  test('HotelCartTheme properties are correct', () {
+  test('HotelCardTheme properties are correct', () {
     final ThemeData theme = HotelBookingTheme.lightTheme;
-    final HotelCardTheme hotelCartTheme = theme.extension<HotelCardTheme>()!;
+    final HotelCardTheme hotelCardTheme = theme.extension<HotelCardTheme>()!;
 
-    expect(hotelCartTheme.titleTextColor, const Color(0xFF222222));
-    expect(hotelCartTheme.subtitleTextColor, const Color(0xFF595959));
-    expect(hotelCartTheme.favoriteIconSelectedColor, Colors.redAccent);
-    expect(hotelCartTheme.favoriteIconDeselectedColor, Colors.white);
+    expect(hotelCardTheme.titleTextColor, const Color(0xFF222222));
+    expect(hotelCardTheme.subtitleTextColor, const Color(0xFF595959));
+    expect(hotelCardTheme.favoriteIconSelectedColor, Colors.redAccent);
+    expect(hotelCardTheme.favoriteIconDeselectedColor, Colors.white);
   });
 }

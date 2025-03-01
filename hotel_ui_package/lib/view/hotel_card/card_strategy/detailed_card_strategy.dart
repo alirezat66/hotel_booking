@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 import 'package:hotel_ui_package/models/translate_strings.dart';
-import 'package:hotel_ui_package/view/hotel_cart/card_strategy/card_strategy.dart';
+import 'package:hotel_ui_package/view/hotel_card/card_strategy/card_strategy.dart';
 
 class DetailedCardStrategy implements CardStrategy {
   @override

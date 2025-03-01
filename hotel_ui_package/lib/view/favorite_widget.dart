@@ -62,8 +62,8 @@ class FavoriteWidgetState extends State<FavoriteWidget>
                         : Icons.favorite_border,
                     size: widget.size,
                     color: widget.initialState
-                        ? context.hotelCartTheme.favoriteIconSelectedColor
-                        : context.hotelCartTheme.favoriteIconDeselectedColor,
+                        ? context.hotelCardTheme.favoriteIconSelectedColor
+                        : context.hotelCardTheme.favoriteIconDeselectedColor,
                   ),
                 );
               }),
@@ -76,10 +76,10 @@ class FavoriteWidgetState extends State<FavoriteWidget>
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.fromBorderSide(BorderSide(
-                      color: context.hotelCartTheme.favoriteIconSelectedColor,
+                      color: context.hotelCardTheme.favoriteIconSelectedColor,
                       width: 3,
                     )),
-                    color: context.hotelCartTheme.favoriteIconSelectedColor),
+                    color: context.hotelCardTheme.favoriteIconSelectedColor),
               );
             },
           ),

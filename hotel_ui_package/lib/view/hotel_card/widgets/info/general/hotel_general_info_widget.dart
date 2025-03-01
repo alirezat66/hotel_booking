@@ -27,13 +27,13 @@ class HotelGeneralInfoWidget extends StatelessWidget {
           hotelName,
           style: context.titleMedium.copyWith(
               fontWeight: FontWeight.w700,
-              color: context.hotelCartTheme.titleTextColor),
+              color: context.hotelCardTheme.titleTextColor),
         ),
         const Gap(2),
         Text(
           destination,
           style: context.bodySmall.copyWith(
-            color: context.hotelCartTheme.subtitleTextColor,
+            color: context.hotelCardTheme.subtitleTextColor,
           ),
         ),
       ],

@@ -41,7 +41,7 @@ extension ThemeExtension on BuildContext {
         dissatisfiedColor: Colors.orange,
         veryDissatisfiedColor: Colors.red,
       );
-  HotelCardTheme get hotelCartTheme =>
+  HotelCardTheme get hotelCardTheme =>
       theme.extension<HotelCardTheme>() ??
       HotelCardTheme(
           titleTextColor: const Color(0xFF222222),
