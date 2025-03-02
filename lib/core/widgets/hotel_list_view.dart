@@ -33,8 +33,9 @@ class HotelListView extends StatelessWidget {
             child: HotelCard(
               cardType: cardType,
               hotel: hotel.toHotelData(),
-              onFavoriteChanged: (isLiked) {},
+              onFavoriteChanged: onFavoriteChange,
               onActionPressed: onActionPressed,
+              onMoreInfoTab: onMoreInfoTab,
             ),
           );
         },

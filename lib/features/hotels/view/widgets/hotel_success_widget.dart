@@ -28,7 +28,12 @@ class HotelSuccessWidget extends StatelessWidget {
             ),
           ),
         ),
-        HotelListView(hotels: hotels, cardType: HotelCardType.detailed),
+        HotelListView(
+          hotels: hotels,
+          cardType: HotelCardType.detailed,
+          onActionPressed: () {},
+          onFavoriteChange: (isFavorite){},
+        ),
       ],
     );
   }
