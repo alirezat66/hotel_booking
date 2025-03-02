@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
-class FavoriteEmptyPage extends StatelessWidget {
-  const FavoriteEmptyPage({super.key});
+class FavoriteEmptyView extends StatelessWidget {
+  const FavoriteEmptyView({super.key});
 
   @override
   Widget build(BuildContext context) {
