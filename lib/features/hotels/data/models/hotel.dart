@@ -69,8 +69,9 @@ class HotelBestOffer {
   factory HotelBestOffer.fromJson(Map<String, dynamic> json) {
     return HotelBestOffer(
       isFlightIncluded: json['flight-included'],
-      travelPrice:double.tryParse(json['travel-price'].toString()) ?? 0.0 ,
-      pricePerPerson:double.tryParse(json['simple-price-per-person'].toString()) ?? 0.0,
+      travelPrice: double.tryParse(json['travel-price'].toString()) ?? 0.0,
+      pricePerPerson:
+          double.tryParse(json['simple-price-per-person'].toString()) ?? 0.0,
       hasMoreOneOffer:
           (json['rooms']['prices-and-occupancy'] as List<dynamic>).length > 1,
       travelDate: TravelDate.fromJson(json['travel-date']),

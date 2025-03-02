@@ -19,6 +19,7 @@ dependencies:
     sdk: flutter
   hotel_ui_package:
     path: hotel_ui_package  
+  gap: ^3.0.1
 dev_dependencies:
   mockito: ^5.4.4
   flutter_test:
