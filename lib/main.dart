@@ -5,6 +5,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hotel_booking/core/bloc/bloc_observer.dart';
 import 'package:hotel_booking/core/di/service_locator.dart';
 import 'package:hotel_booking/core/route/app_router.dart';
+import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
+import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
 Future<void> main() async {
@@ -50,11 +52,11 @@ class MainTabsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter(
-      routes: const [
-        OverviewRoute(),
-        HotelRoute(), // Pass your hotel list here later
+      routes: [
+        const OverviewRoute(),
+        const HotelRoute(), // Pass your hotel list here later
         FavoriteRoute(),
-        AccountRoute(),
+        const AccountRoute(),
       ],
       builder: (context, child) {
         final tabsRouter = AutoTabsRouter.of(context);
@@ -64,7 +66,17 @@ class MainTabsScreen extends StatelessWidget {
               _tabTitles[tabsRouter.activeIndex],
             ),
           ),
-          body: child,
+          body: MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => locator<FavoriteCubit>(),
+              ),
+              BlocProvider(
+                create: (context) => locator<HotelCubit>()..getHotels(),
+              ),
+            ],
+            child: child,
+          ),
           bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType
                 .fixed, // Add this if not already present

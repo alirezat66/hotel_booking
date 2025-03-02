@@ -30,10 +30,17 @@ class AccountRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [FavoritePage]
-class FavoriteRoute extends PageRouteInfo<void> {
-  const FavoriteRoute({List<PageRouteInfo>? children})
-      : super(
+class FavoriteRoute extends PageRouteInfo<FavoriteRouteArgs> {
+  FavoriteRoute({
+    Key? key,
+    Widget? emptyImage,
+    List<PageRouteInfo>? children,
+  }) : super(
           FavoriteRoute.name,
+          args: FavoriteRouteArgs(
+            key: key,
+            emptyImage: emptyImage,
+          ),
           initialChildren: children,
         );
 
@@ -42,9 +49,30 @@ class FavoriteRoute extends PageRouteInfo<void> {
   static PageInfo page = PageInfo(
     name,
     builder: (data) {
-      return const FavoritePage();
+      final args = data.argsAs<FavoriteRouteArgs>(
+          orElse: () => const FavoriteRouteArgs());
+      return FavoritePage(
+        key: args.key,
+        emptyImage: args.emptyImage,
+      );
     },
   );
+}
+
+class FavoriteRouteArgs {
+  const FavoriteRouteArgs({
+    this.key,
+    this.emptyImage,
+  });
+
+  final Key? key;
+
+  final Widget? emptyImage;
+
+  @override
+  String toString() {
+    return 'FavoriteRouteArgs{key: $key, emptyImage: $emptyImage}';
+  }
 }
 
 /// generated route for

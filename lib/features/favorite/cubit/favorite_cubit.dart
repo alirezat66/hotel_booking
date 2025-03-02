@@ -16,7 +16,7 @@ class FavoriteCubit extends Cubit<List<HotelFavorite>> {
 
   void _subscribeToFavorite() {
     _favoriteSubscription = favoriteRepository.watchFavorites().listen((list) {
-      list.sort((a, b) => b.createdAt.compareTo(a.createdAt));
+      list.sort((a, b) => b.createdAt!.compareTo(a.createdAt!));
       emit(list);
     });
   }
