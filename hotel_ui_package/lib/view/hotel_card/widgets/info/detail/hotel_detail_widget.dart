@@ -22,6 +22,8 @@ class HotelDetailWidget extends StatelessWidget {
   final String nightText;
   final String dayText;
   final String includeFlightText;
+  final String kinderText;
+  final String adultText;
   const HotelDetailWidget({
     super.key,
     required this.days,
@@ -39,6 +41,8 @@ class HotelDetailWidget extends StatelessWidget {
     this.nightText = 'Nächte',
     this.dayText = 'Tage',
     this.includeFlightText = 'inkl. Flug',
+    this.kinderText = 'Kinder',
+    this.adultText = 'Erw',
   });
 
   @override
@@ -48,16 +52,17 @@ class HotelDetailWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
-            child: TravelInfoWidget(dateInfo: [
-              '$days $dayText',
-              '$nights $nightText',
-            ], roomInfo: [
-              overallName,
-              overallBoarding
-            ], overallInfo: [
-              '$adults Erw., $kids Kinder',
-              if (isFlightIncluded) includeFlightText
-            ],),
+            child: TravelInfoWidget(
+              dateInfo: [
+                '$days $dayText',
+                '$nights $nightText',
+              ],
+              roomInfo: [overallName, overallBoarding],
+              overallInfo: [
+                '$adults $adultText., $kids $kinderText',
+                if (isFlightIncluded) includeFlightText
+              ],
+            ),
           ),
           PriceWidget(
             perPersonPrice: perPersonPrice,

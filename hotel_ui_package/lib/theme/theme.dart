@@ -35,6 +35,7 @@ class HotelBookingTheme {
           cardTheme: _getCardTheme(),
           visualDensity: VisualDensity.compact,
           bottomNavigationBarTheme: _getBottomNavigationBarTheme(),
+          radioTheme: _radioTheme(),
           extensions: [
             _getRatingBadgeTheme(),
             _getHotelCardTheme(),
@@ -219,6 +220,20 @@ class HotelBookingTheme {
         letterSpacing: 0.5,
         color: lightTertiary,
       ),
+    );
+  }
+
+  static RadioThemeData _radioTheme() {
+    return RadioThemeData(
+      fillColor: WidgetStateProperty.resolveWith((states) {
+        if (states.contains(WidgetState.disabled)) {
+          return Colors.grey;
+        } else if (states.contains(WidgetState.selected)) {
+          return lightPrimary;
+        } else {
+          return lightTertiary;
+        }
+      }),
     );
   }
 }

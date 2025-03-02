@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hotel_booking/core/data/favorite_repository.dart';
@@ -6,12 +7,15 @@ import 'package:hotel_booking/core/data/hive_favorite_repository_impl.dart';
 import 'package:hotel_booking/core/network/api_client.dart';
 import 'package:hotel_booking/core/network/config/client_config.dart';
 import 'package:hotel_booking/core/network/dio_client.dart';
+import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
 import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
 import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
 import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
 import 'package:hotel_booking/features/hotels/data/repository/hotel_repository.dart';
 import 'package:hotel_booking/features/hotels/data/repository/remote_hotel_repository_impl.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:path_provider/path_provider.dart';
 
 final locator = GetIt.instance;
 
@@ -20,6 +24,7 @@ class ServiceLocator {
     _registerNetwork();
     _registerHotel();
     await _registerLocalStorage();
+    await _registerHydratedBloc();
   }
 
   static void _registerHotel() {
@@ -54,5 +59,14 @@ class ServiceLocator {
     locator.registerFactory<FavoriteCubit>(() => FavoriteCubit(
           locator<FavoriteRepository>(),
         ));
+  }
+
+  static _registerHydratedBloc() async {
+    HydratedBloc.storage = await HydratedStorage.build(
+      storageDirectory: kIsWeb
+          ? HydratedStorageDirectory.web
+          : HydratedStorageDirectory((await getTemporaryDirectory()).path),
+    );
+    locator.registerFactory<LocaleBloc>(() => LocaleBloc());
   }
 }
