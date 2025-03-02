@@ -4,7 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
 class FavoriteEmptyView extends StatelessWidget {
-  const FavoriteEmptyView({super.key});
+  final Widget? emptyImage;
+  const FavoriteEmptyView({super.key, this.emptyImage});
 
   @override
   Widget build(BuildContext context) {
@@ -14,9 +15,10 @@ class FavoriteEmptyView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          SvgPicture.network(
-            'https://www.ab-in-den-urlaub.de/merkzettel/assets/heartInhands-BtEsFis3.svg',
-          ),
+          emptyImage ??
+              SvgPicture.network(
+                'https://www.ab-in-den-urlaub.de/merkzettel/assets/heartInhands-BtEsFis3.svg',
+              ),
           const Gap(24),
           Text(
             'Deine Favoriten - Immer zur Hand',

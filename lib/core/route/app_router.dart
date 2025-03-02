@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hotel_booking/features/account/account_page.dart';
 import 'package:hotel_booking/features/favorite/view/favorite_page.dart';
 import 'package:hotel_booking/features/hotels/view/hotel_page.dart';
