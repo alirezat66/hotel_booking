@@ -11,5 +11,11 @@
     "days": "Tage",
     "nights": "Nächte",
     "adults": "Erw",
-    "children": "Kinder"
+    "children": "Kinder",
+    "fetchError": "Hoppla! Da ist etwas schiefgelaufen.",
+    "retry": "Wiederholen",
+    "invalidResponseFormat": "Ungültiges Antwortformat",
+    "failedToFetch": "Abrufen der Hotels fehlgeschlagen",
+    "from": "ab",
+    "flight": "Flug"
 }

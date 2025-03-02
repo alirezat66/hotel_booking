@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -21,14 +22,14 @@ class FavoriteEmptyView extends StatelessWidget {
               ),
           const Gap(24),
           Text(
-            'Deine Favoriten - Immer zur Hand',
+            'emptyFavorites'.tr(),
             style: context.titleLarge.copyWith(
               fontWeight: FontWeight.w700,
             ),
           ),
           const Gap(16),
           Text(
-            'Melde dich jetzt an, um deine Favoriten auf allen Geräten zu synchronisieren und einzusehen.',
+            'singUpNow'.tr(),
             textAlign: TextAlign.center,
             style: context.titleSmall.copyWith(),
           )

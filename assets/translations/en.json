@@ -11,5 +11,11 @@
     "days": "Days",
     "nights": "Nights",
     "adults": "Adl",
-    "children": "kids"
+    "children": "kids",
+    "fetchError": "Oops! Something went wrong.",
+    "retry": "Wiederholen",
+    "invalidResponseFormat": "Invalid response format",
+    "failedToFetch": "Failed to fetch hotels",
+    "from": "From",
+    "flight": "Flight"
 }

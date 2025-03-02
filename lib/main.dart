@@ -18,8 +18,12 @@ Future<void> main() async {
   await ServiceLocator.setup();
   runApp(EasyLocalization(
       supportedLocales: const [
-        Locale('en',),
-        Locale('de',),
+        Locale(
+          'en',
+        ),
+        Locale(
+          'de',
+        ),
       ],
       path: 'assets/translations',
       fallbackLocale: const Locale('en'),
@@ -54,11 +58,11 @@ class MyApp extends StatelessWidget {
 @RoutePage()
 class MainTabsScreen extends StatelessWidget {
   const MainTabsScreen({super.key});
-  static const List<String> _tabTitles = [
-    'OverView',
-    'Hotels',
-    'Favorites',
-    'Account',
+  static final List<String> _tabTitles = [
+    'overview'.tr(),
+    'hotels'.tr(),
+    'favorites'.tr(),
+    'account'.tr(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -94,22 +98,22 @@ class MainTabsScreen extends StatelessWidget {
 
             currentIndex: tabsRouter.activeIndex,
             onTap: (index) => tabsRouter.setActiveIndex(index),
-            items: const [
+            items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Overview',
+                icon: const Icon(Icons.home),
+                label: 'overview'.tr(),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.hotel),
-                label: 'Hotels',
+                icon: const Icon(Icons.hotel),
+                label: 'hotels'.tr(),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.favorite),
-                label: 'Favorites',
+                icon: const Icon(Icons.favorite),
+                label: 'favorites'.tr(),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.account_circle),
-                label: 'Account',
+                icon: const Icon(Icons.account_circle),
+                label: 'account'.tr(),
               ),
             ],
           ),

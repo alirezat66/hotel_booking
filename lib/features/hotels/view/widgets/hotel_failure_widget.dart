@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -19,7 +20,7 @@ class HotelFailureWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            'Oops! Something went wrong.',
+            'fetchError'.tr(),
             style: context.textTheme.headlineSmall,
           ),
           const Gap(8),
@@ -27,7 +28,7 @@ class HotelFailureWidget extends StatelessWidget {
           const Gap(16),
           ElevatedButton(
             onPressed: () => context.read<HotelCubit>().getHotels(),
-            child: const Text('Retry'),
+            child: const Text('retry').tr(),
           ),
         ],
       ),
