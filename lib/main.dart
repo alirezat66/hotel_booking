@@ -1,19 +1,29 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hotel_booking/core/bloc/bloc_observer.dart';
 import 'package:hotel_booking/core/di/service_locator.dart';
 import 'package:hotel_booking/core/route/app_router.dart';
+import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
 import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
 import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
   Bloc.observer = HotelBlocObserver();
-  ServiceLocator.setup();
-  runApp(const MyApp());
+  await ServiceLocator.setup();
+  runApp(EasyLocalization(
+      supportedLocales: const [
+        Locale('en',),
+        Locale('de',),
+      ],
+      path: 'assets/translations',
+      fallbackLocale: const Locale('en'),
+      child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,20 +32,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: 'Flutter Demo',
-      theme: HotelBookingTheme.lightTheme,
-      locale: const Locale('de', 'DE'),
-      supportedLocales: const [
-        Locale('en', 'US'),
-        Locale('de', 'DE'),
-      ],
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      routerConfig: AppRouter().config(),
+    return BlocProvider(
+      create: (context) => locator<LocaleBloc>(),
+      child: BlocBuilder<LocaleBloc, Locale>(
+        builder: (context, locale) {
+          context.setLocale(locale);
+          return MaterialApp.router(
+            title: 'Flutter Demo',
+            theme: HotelBookingTheme.lightTheme,
+            localizationsDelegates: context.localizationDelegates,
+            supportedLocales: context.supportedLocales,
+            locale: locale,
+            routerConfig: AppRouter().config(),
+          );
+        },
+      ),
     );
   }
 }
