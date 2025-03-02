@@ -1,0 +1,1970 @@
+{
+    "filters": [
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "sp__IT08F-RES",
+                    "attribute-value": "kostenlos innerhalb 3-5 Tagen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 381
+                },
+                {
+                    "attribute-identifier": "sp__IT08F-CAN",
+                    "attribute-value": "kostenlos oder kostengünstig bis kurz vor Anreise",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 1220
+                }
+            ],
+            "category": "special-flexible",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "sp__IT08P-DEP",
+                    "attribute-value": "keine oder geringe Anzahlung",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61000,
+                    "result-count": 307
+                },
+                {
+                    "attribute-identifier": "sp__IT08P-DISC",
+                    "attribute-value": "Veranstalter-Rabatte",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 1000
+                }
+            ],
+            "category": "special-promotion",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "category": "price",
+            "in-use": false,
+            "range": {
+                "max": "600000",
+                "min": "50000",
+                "type": "amount",
+                "selected-max-value": "",
+                "selected-min-value": ""
+            },
+            "type": "range"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "ca__category1",
+                    "attribute-value": "1",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 991
+                },
+                {
+                    "attribute-identifier": "ca__category2",
+                    "attribute-value": "2",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 976
+                },
+                {
+                    "attribute-identifier": "ca__category3",
+                    "attribute-value": "3",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61000,
+                    "result-count": 901
+                },
+                {
+                    "attribute-identifier": "ca__category4",
+                    "attribute-value": "4",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 69371,
+                    "result-count": 595
+                },
+                {
+                    "attribute-identifier": "ca__category5",
+                    "attribute-value": "5",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 103800,
+                    "result-count": 76
+                }
+            ],
+            "category": "hotel-category",
+            "in-use": false,
+            "type": "radio"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "ra__fair",
+                    "attribute-value": "3.5",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 65000,
+                    "result-count": 414
+                },
+                {
+                    "attribute-identifier": "ra__good",
+                    "attribute-value": "3.8",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 65800,
+                    "result-count": 399
+                },
+                {
+                    "attribute-identifier": "ra__very_good",
+                    "attribute-value": "4.1",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67000,
+                    "result-count": 360
+                },
+                {
+                    "attribute-identifier": "ra__excellent",
+                    "attribute-value": "4.4",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67000,
+                    "result-count": 266
+                }
+            ],
+            "category": "rating",
+            "in-use": false,
+            "type": "radio"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT06-AI",
+                    "attribute-value": "All Inclusive",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT06-FB",
+                    "attribute-value": "Vollpension",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT06-HB",
+                    "attribute-value": "Halbpension",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT06-BB",
+                    "attribute-value": "Frühstück",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT06-NB",
+                    "attribute-value": "Ohne Verpflegung",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT06-XX",
+                    "attribute-value": "laut Veranstalter",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                }
+            ],
+            "category": "board-type",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT04-DO",
+                    "attribute-value": "Doppelzimmer",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-SUI",
+                    "attribute-value": "Suite",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-FA",
+                    "attribute-value": "Familienzimmer",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-ST",
+                    "attribute-value": "Studio",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-BU",
+                    "attribute-value": "Bungalow",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-SI",
+                    "attribute-value": "Einzelzimmer",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-MB",
+                    "attribute-value": "Mehrbettzimmer",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-DU",
+                    "attribute-value": "Duplex-Zimmer",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-AP",
+                    "attribute-value": "Apartment",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-HO",
+                    "attribute-value": "Ferienhaus",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-HF",
+                    "attribute-value": "Ferienwohnung",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-VI",
+                    "attribute-value": "Villa",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT04-XX",
+                    "attribute-value": "laut Veranstalter",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                }
+            ],
+            "category": "room-type",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT13-SEVI#SEVI",
+                    "attribute-value": "Meerblick",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "IT13-SEVI#PART",
+                    "attribute-value": "Teilweise Meerblick",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                }
+            ],
+            "category": "view",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-BEA#DIR",
+                    "attribute-value": "Direkte Strandlage",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 62400,
+                    "result-count": 114
+                },
+                {
+                    "attribute-identifier": "IT03-BEA#GRAV",
+                    "attribute-value": "Kiesstrand",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61000,
+                    "result-count": 28
+                },
+                {
+                    "attribute-identifier": "IT03-BEA#SAND",
+                    "attribute-value": "Sandstrand",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 513
+                }
+            ],
+            "category": "beach-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-TYPE#AP",
+                    "attribute-value": "Apartmenthotel",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 60200,
+                    "result-count": 160
+                },
+                {
+                    "attribute-identifier": "IT03-TYPE#BU",
+                    "attribute-value": "Bungalow-Komplex",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 89518,
+                    "result-count": 6
+                },
+                {
+                    "attribute-identifier": "IT03-TYPE#ADU",
+                    "attribute-value": "Erwachsenenhotel",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 67400,
+                    "result-count": 151
+                },
+                {
+                    "attribute-identifier": "IT03-TYPE#FAM",
+                    "attribute-value": "Familienhotel",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 65200,
+                    "result-count": 93
+                },
+                {
+                    "attribute-identifier": "IT03-TYPE#GOL",
+                    "attribute-value": "Golf-Hotel",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 90156,
+                    "result-count": 29
+                },
+                {
+                    "attribute-identifier": "IT03-TYPE#SPA",
+                    "attribute-value": "Spa-Hotel",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 85600,
+                    "result-count": 34
+                },
+                {
+                    "attribute-identifier": "IT03-TYPE#BEA",
+                    "attribute-value": "Strandhotel",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61000,
+                    "result-count": 366
+                }
+            ],
+            "category": "hotel-type",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-HOT#24R",
+                    "attribute-value": "24h Rezeption",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 60200,
+                    "result-count": 368
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#BIKE",
+                    "attribute-value": "Fahrradverleih",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 833
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#HEAT",
+                    "attribute-value": "Heizung",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67400,
+                    "result-count": 103
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#AC",
+                    "attribute-value": "Klimaanlage",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67400,
+                    "result-count": 150
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#DCHAIR",
+                    "attribute-value": "Liegestuhl",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 914
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#PARK",
+                    "attribute-value": "Parkplatz",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 851
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#SUNSH",
+                    "attribute-value": "Sonnenschirm",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 887
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#TV",
+                    "attribute-value": "TV",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 1349
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#INTE",
+                    "attribute-value": "WLAN",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 55600,
+                    "result-count": 1724
+                },
+                {
+                    "attribute-identifier": "IT03-HOT#RSER",
+                    "attribute-value": "Zimmerservice",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 488
+                }
+            ],
+            "category": "hotel-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-POOL#HEAT",
+                    "attribute-value": "Beheizter Pool",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61200,
+                    "result-count": 103
+                },
+                {
+                    "attribute-identifier": "IT03-POOL#FRESH",
+                    "attribute-value": "Frischwasser-Pool",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61000,
+                    "result-count": 233
+                },
+                {
+                    "attribute-identifier": "IT03-POOL#IN",
+                    "attribute-value": "Indoor Pool",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61200,
+                    "result-count": 435
+                },
+                {
+                    "attribute-identifier": "IT03-POOL#OUT",
+                    "attribute-value": "Outdoor Pool",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 55600,
+                    "result-count": 910
+                },
+                {
+                    "attribute-identifier": "IT03-POOL#SALT",
+                    "attribute-value": "Salzwasser-Pool",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 77400,
+                    "result-count": 38
+                }
+            ],
+            "category": "pool-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-CHI#ANI",
+                    "attribute-value": "Kinder-Animation",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 60200,
+                    "result-count": 188
+                },
+                {
+                    "attribute-identifier": "IT03-CHI#CLUB",
+                    "attribute-value": "Kinder-Disco",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 357
+                },
+                {
+                    "attribute-identifier": "IT03-CHI#POOL",
+                    "attribute-value": "Kinder-Pool",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 591
+                },
+                {
+                    "attribute-identifier": "IT03-CHI#PLAY",
+                    "attribute-value": "Spielplatz",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 62400,
+                    "result-count": 419
+                },
+                {
+                    "attribute-identifier": "IT03-CHI#PLAYR",
+                    "attribute-value": "Spielzimmer",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61200,
+                    "result-count": 405
+                },
+                {
+                    "attribute-identifier": "IT03-CHI#WSLI",
+                    "attribute-value": "Wasserrutsche",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 73200,
+                    "result-count": 62
+                }
+            ],
+            "category": "children-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-ECO#GTI",
+                    "attribute-value": "Nachhaltige Hotels",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 72600,
+                    "result-count": 129
+                }
+            ],
+            "category": "eco-awards",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-SPO#AEROB",
+                    "attribute-value": "Aerobic",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 65000,
+                    "result-count": 297
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#BADMIN",
+                    "attribute-value": "Badminton",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 76400,
+                    "result-count": 40
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#BASK",
+                    "attribute-value": "Basketball",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67800,
+                    "result-count": 115
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#BVOLLEY",
+                    "attribute-value": "Beach-Volleyball",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 72600,
+                    "result-count": 213
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#BILLA",
+                    "attribute-value": "Billard",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 566
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#BOCC",
+                    "attribute-value": "Boccia",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 62400,
+                    "result-count": 211
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#ARCH",
+                    "attribute-value": "Bogenschießen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67800,
+                    "result-count": 196
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#BOWL",
+                    "attribute-value": "Bowling",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 70000,
+                    "result-count": 24
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#DART",
+                    "attribute-value": "Dart",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 62400,
+                    "result-count": 321
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#FITSTU",
+                    "attribute-value": "Fitnessstudio",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 730
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#GOLF",
+                    "attribute-value": "Golf",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 560
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#GYMN",
+                    "attribute-value": "Gymnastik",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 235
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#MGOLF",
+                    "attribute-value": "Minigolf",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 228
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#BIKE",
+                    "attribute-value": "Radsport",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 751
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#RIDE",
+                    "attribute-value": "Reiten",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 383
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#SQUAS",
+                    "attribute-value": "Squash",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 122
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#TENNIS",
+                    "attribute-value": "Tennis",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 534
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#TTENNIS",
+                    "attribute-value": "Tischtennis",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 509
+                },
+                {
+                    "attribute-identifier": "IT03-SPO#WAEROB",
+                    "attribute-value": "Wasser-Aerobic",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 72600,
+                    "result-count": 144
+                }
+            ],
+            "category": "sports-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-WSPO#BANBO",
+                    "attribute-value": "Bananenboot",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67800,
+                    "result-count": 98
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#BOAT",
+                    "attribute-value": "Boot",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 73200,
+                    "result-count": 75
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#JSKI",
+                    "attribute-value": "Jetski",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 70200,
+                    "result-count": 112
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#CANO",
+                    "attribute-value": "Kanu",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 71800,
+                    "result-count": 164
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#CATA",
+                    "attribute-value": "Katamaran",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 69200,
+                    "result-count": 116
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#SAIL",
+                    "attribute-value": "Segeln",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67400,
+                    "result-count": 213
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#SURF",
+                    "attribute-value": "Surfen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 72800,
+                    "result-count": 85
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#DIVE",
+                    "attribute-value": "Tauchen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 466
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#PBOAT",
+                    "attribute-value": "Tretboot",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67800,
+                    "result-count": 141
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#WSKI",
+                    "attribute-value": "Wasserski",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67800,
+                    "result-count": 119
+                },
+                {
+                    "attribute-identifier": "IT03-WSPO#WSURF",
+                    "attribute-value": "Windsurfen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61000,
+                    "result-count": 317
+                }
+            ],
+            "category": "water-sports-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-WELL#STEAMB",
+                    "attribute-value": "Dampfbad",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 74147,
+                    "result-count": 290
+                },
+                {
+                    "attribute-identifier": "IT03-WELL#MASS",
+                    "attribute-value": "Massage",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67000,
+                    "result-count": 632
+                },
+                {
+                    "attribute-identifier": "IT03-WELL#SAUN",
+                    "attribute-value": "Sauna",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 59400,
+                    "result-count": 528
+                },
+                {
+                    "attribute-identifier": "IT03-WELL#SOLA",
+                    "attribute-value": "Solarium",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 61000,
+                    "result-count": 558
+                },
+                {
+                    "attribute-identifier": "IT03-WELL#SUND",
+                    "attribute-value": "Sonnendeck",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 879
+                },
+                {
+                    "attribute-identifier": "IT03-WELL#WHIRLP",
+                    "attribute-value": "Whirlpool",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67800,
+                    "result-count": 473
+                }
+            ],
+            "category": "wellness-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-REST#BAR",
+                    "attribute-value": "Bar",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 875
+                },
+                {
+                    "attribute-identifier": "IT03-REST#CAFE",
+                    "attribute-value": "Cafe",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 656
+                },
+                {
+                    "attribute-identifier": "IT03-REST#KIOS",
+                    "attribute-value": "Kiosk",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 73200,
+                    "result-count": 50
+                },
+                {
+                    "attribute-identifier": "IT03-REST#MMART",
+                    "attribute-value": "Minimarkt",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 370
+                },
+                {
+                    "attribute-identifier": "IT03-REST#PBAR",
+                    "attribute-value": "Poolbar",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 706
+                },
+                {
+                    "attribute-identifier": "IT03-REST#RESTA",
+                    "attribute-value": "Restaurant",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 55600,
+                    "result-count": 923
+                }
+            ],
+            "category": "restaurants/food-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "IT03-ANI#ANI",
+                    "attribute-value": "Animation",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 60200,
+                    "result-count": 307
+                },
+                {
+                    "attribute-identifier": "IT03-ANI#CASI",
+                    "attribute-value": "Casino",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67800,
+                    "result-count": 70
+                },
+                {
+                    "attribute-identifier": "IT03-ANI#DISC",
+                    "attribute-value": "Disco",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 60200,
+                    "result-count": 251
+                },
+                {
+                    "attribute-identifier": "IT03-ANI#THEA",
+                    "attribute-value": "Theater",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 67800,
+                    "result-count": 59
+                }
+            ],
+            "category": "animation-attributes",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "tr__direct_flight",
+                    "attribute-value": "Direktflug",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": true,
+                    "min-price": 0,
+                    "result-count": 1
+                },
+                {
+                    "attribute-identifier": "tr__IT14-HTR",
+                    "attribute-value": "Transfer",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 1
+                },
+                {
+                    "attribute-identifier": "tr__IT14-RAFL",
+                    "attribute-value": "Zug zum Flug",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 1
+                }
+            ],
+            "category": "transfer",
+            "in-use": false,
+            "type": "checkbox"
+        },
+        {
+            "attributes": [
+                {
+                    "attribute-identifier": "to__ATID",
+                    "attribute-value": "airtours",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ALD",
+                    "attribute-value": "Aldiana",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ALDX",
+                    "attribute-value": "Aldiana-X",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ALL",
+                    "attribute-value": "alltours Flugreisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XALL",
+                    "attribute-value": "alltours-X",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ANEX",
+                    "attribute-value": "Anex Tour",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XANE",
+                    "attribute-value": "Anex Tour Dynamisch",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ATK",
+                    "attribute-value": "Attika Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__BCH",
+                    "attribute-value": "Bentour Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__BENX",
+                    "attribute-value": "Bentour Reisen (BENX)",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__BU",
+                    "attribute-value": "Bucher Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XBU",
+                    "attribute-value": "Bucher Reisen (GoBucher)",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__BYE",
+                    "attribute-value": "byebye",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__CPH",
+                    "attribute-value": "Capital Holidays",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__DEH",
+                    "attribute-value": "Condor Holidays",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__COR",
+                    "attribute-value": "Coral Travel",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__COS",
+                    "attribute-value": "Coral Travel Schweiz",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__DER",
+                    "attribute-value": "Dertour",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XDER",
+                    "attribute-value": "Dertour (XDER)",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__DERD",
+                    "attribute-value": "Dertour Dynamisch",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ECC",
+                    "attribute-value": "Ecco-Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XECC",
+                    "attribute-value": "Ecco-Reisen (XECC)",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__EYH",
+                    "attribute-value": "Etihad Holidays",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__EWH",
+                    "attribute-value": "Eurowings Holidays",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ETI",
+                    "attribute-value": "Express Travel Intern.",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XETI",
+                    "attribute-value": "Express Travel International XETI",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XFTV",
+                    "attribute-value": "Falkensteiner Holidays",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__FER",
+                    "attribute-value": "Ferien Touristik",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__FIT",
+                    "attribute-value": "FIT Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XFIT",
+                    "attribute-value": "FIT Reisen XFIT",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__FOR",
+                    "attribute-value": "For You Travel GmbH",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__HLX1",
+                    "attribute-value": "HLX Touristik",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__HOCL",
+                    "attribute-value": "HolidayCloud",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ITSX",
+                    "attribute-value": "ITS Indi",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__ITS",
+                    "attribute-value": "ITS-Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__JAHN",
+                    "attribute-value": "Jahn Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XJAH",
+                    "attribute-value": "Jahn Reisen Indi",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__LTUR",
+                    "attribute-value": "L'TUR",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__LMXI",
+                    "attribute-value": "LMX International",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__LMIF",
+                    "attribute-value": "LMX International Flex",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XLMX",
+                    "attribute-value": "LMX Touristik (LMX Live)",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__LMXF",
+                    "attribute-value": "LMX Touristik Flex",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__LHH",
+                    "attribute-value": "Lufthansa Holidays",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__MED",
+                    "attribute-value": "Medina Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__MWR",
+                    "attribute-value": "Meiers Weltreisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XMWR",
+                    "attribute-value": "Meiers Weltreisen XMWR",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__NEC",
+                    "attribute-value": "Neckermann Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XNEC",
+                    "attribute-value": "Neckermann Reisen (Neckermann XNEC)",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__OLI",
+                    "attribute-value": "Olimar",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__RIVA",
+                    "attribute-value": "Riva Tours",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__SLRD",
+                    "attribute-value": "Schauinsland Dynamisch",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__SLR",
+                    "attribute-value": "Schauinsland-Reisen",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__SIT",
+                    "attribute-value": "Spica Travel",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__TJAX",
+                    "attribute-value": "Travelix",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__TUID",
+                    "attribute-value": "TUI Deutschland",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XTUI",
+                    "attribute-value": "TUI XTUI",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__VTO",
+                    "attribute-value": "Vtours GmbH",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__VTOI",
+                    "attribute-value": "vtours international",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__WFT",
+                    "attribute-value": "WE Flytour",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__WIN",
+                    "attribute-value": "Windrose",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XPUR",
+                    "attribute-value": "XPUR",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__OGE",
+                    "attribute-value": "Öger Tours",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                },
+                {
+                    "attribute-identifier": "to__XOGE",
+                    "attribute-value": "Öger Tours XÖGER",
+                    "in-use": false,
+                    "is-disabled": false,
+                    "is-popular": false,
+                    "min-price": 0,
+                    "result-count": 0
+                }
+            ],
+            "category": "tour-operator",
+            "in-use": false,
+            "type": "checkbox"
+        }
+    ],
+    "hotel-count": 998,
+    "meta": {
+        "agent": {
+            "availability": "Täglich erreichbar: 09:00 - 22:00 Uhr",
+            "image": {
+                "large": "https://directus-staging.search.travel-test.invia.lan/assets/df37238a-3d15-4ce2-8868-3a39253ff3a5.jpeg",
+                "small": "https://directus-staging.search.travel-test.invia.lan/assets/df37238a-3d15-4ce2-8868-3a39253ff3a5.jpeg"
+            },
+            "name": "Urlaubsexperte Andreas",
+            "telephone": "0341 65050 53220",
+            "text": "“Kennst du schon Mallorcas geheime Strände? Ich verrate sie dir gern und buche den perfekten Aufenthalt für dich.”",
+            "vita": "10 Jahre Erfahrung als Reiseberater"
+        },
+        "count": 998,
+        "scarcity-elements": [
+            {
+                "type": "REGION_IN_HIGH_DEMAND"
+            }
+        ]
+    },
+    "hotels": [
+        {
+            "analytics": {
+                "select_item.item.0": {
+                    "currency": "EUR",
+                    "itemCategory": "4.0 - unverified, verySatisfied",
+                    "itemCategory2": "IT08F-CAN#FEE#FEE,IT08P-DISC#CRED,IT08F-RES#INC,IT08P-DEP",
+                    "itemId": "35489-giata",
+                    "itemListName": "hotel list - recommendation",
+                    "itemName": "Can Picafort Palace",
+                    "itemRooms": "1",
+                    "price": "844.00",
+                    "quantity": "1"
+                }
+            },
+            "badges": [],
+            "best-offer": {
+                "applied-travel-discount": null,
+                "detailed-price-per-person": [],
+                "included-travel-discount": 0,
+                "original-travel-price": 84400,
+                "simple-price-per-person": 42200,
+                "total": 84400,
+                "travel-price": 84400,
+                "available-special-groups": [
+                    "flexible",
+                    "promotion"
+                ],
+                "flight-included": true,
+                "rooms": {
+                    "overall": {
+                        "attributes": [],
+                        "boarding": "Ohne Verpflegung",
+                        "name": "Apartment",
+                        "adult-count": 2,
+                        "children-ages": [],
+                        "children-count": 0,
+                        "quantity": 1,
+                        "same-boarding": true,
+                        "same-room-groups": true
+                    },
+                    "prices-and-occupancy": [
+                        {
+                            "adult-count": 2,
+                            "children-ages": [],
+                            "children-count": 0,
+                            "detailed-price-per-person": [],
+                            "group-identifier": "af21b91892c2f88a6dbe2d12c8ac269fd0bf538fe4136107a21a0b84d1fad9a3",
+                            "simple-price-per-person": 42200,
+                            "total": 84400
+                        }
+                    ],
+                    "room-groups": [
+                        {
+                            "attributes": [],
+                            "boarding": "Ohne Verpflegung",
+                            "name": "Apartment",
+                            "detailed-description": null,
+                            "group-identifier": "af21b91892c2f88a6dbe2d12c8ac269fd0bf538fe4136107a21a0b84d1fad9a3",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                "travel-date": {
+                    "days": 8,
+                    "departure-date": "2024-10-15",
+                    "nights": 7,
+                    "return-date": "2024-10-22"
+                }
+            },
+            "category": 4,
+            "category-type": "dots",
+            "destination": "Can Picafort, Mallorca, Spanien",
+            "hotel-id": "35489-giata",
+            "images": [
+                {
+                    "large": "https://image-resizer.prod.invia-travel.io/images/multicode/35489/org/hotel35489-5ee7c256-dc48-4e95-8ad1-fdf77077a992.jpeg?width=700&height=525",
+                    "small": "https://image-resizer.prod.invia-travel.io/images/multicode/35489/org/hotel35489-5ee7c256-dc48-4e95-8ad1-fdf77077a992.jpeg?width=400&height=300"
+                },
+                {
+                    "large": "https://image-resizer.prod.invia-travel.io/images/multicode/35489/org/hotel35489-dd4613dc-564b-4fa1-9120-6cf0b07999e7.jpeg?width=700&height=525",
+                    "small": "https://image-resizer.prod.invia-travel.io/images/multicode/35489/org/hotel35489-dd4613dc-564b-4fa1-9120-6cf0b07999e7.jpeg?width=400&height=300"
+                }
+            ],
+            "latitude": 39.764034,
+            "longitude": 3.1490614,
+            "name": "Can Picafort Palace",
+            "rating-info": {
+                "recommendation-rate": 0,
+                "reviews-count": 381,
+                "score": 4.2,
+                "score-description": "Sehr Gut"
+            }
+        },
+        {
+            "analytics": {
+                "select_item.item.0": {
+                    "currency": "EUR",
+                    "itemCategory": "4.0 - unverified, highlySatisfied",
+                    "itemCategory2": "IT08P-DISC#CRED,IT08F-RES#INC,IT08F-CAN#FEE#FEIN,IT08F-CAN#FEE#FEE,IT08F-CAN#FREE,IT08P-DEP",
+                    "itemId": "3140-giata",
+                    "itemListName": "hotel list - recommendation",
+                    "itemName": "Blau Punta Reina",
+                    "itemRooms": "1",
+                    "price": "972.94",
+                    "quantity": "1"
+                }
+            },
+            "badges": [],
+            "best-offer": {
+                "applied-travel-discount": null,
+                "detailed-price-per-person": [],
+                "included-travel-discount": 0,
+                "original-travel-price": 97294,
+                "simple-price-per-person": 48647,
+                "total": 97294,
+                "travel-price": 97294,
+                "available-special-groups": [
+                    "promotion",
+                    "flexible"
+                ],
+                "flight-included": true,
+                "rooms": {
+                    "overall": {
+                        "attributes": [],
+                        "boarding": "Halbpension Plus",
+                        "name": "Deluxe/Premium/Superior-Zimmer",
+                        "adult-count": 2,
+                        "children-ages": [],
+                        "children-count": 0,
+                        "quantity": 1,
+                        "same-boarding": true,
+                        "same-room-groups": true
+                    },
+                    "prices-and-occupancy": [
+                        {
+                            "adult-count": 2,
+                            "children-ages": [],
+                            "children-count": 0,
+                            "detailed-price-per-person": [],
+                            "group-identifier": "1afe129cd2fca08dc76510a586c476025cca865fa4561e057ab89365993b7373",
+                            "simple-price-per-person": 48647,
+                            "total": 97294
+                        }
+                    ],
+                    "room-groups": [
+                        {
+                            "attributes": [],
+                            "boarding": "Halbpension Plus",
+                            "name": "Deluxe/Premium/Superior-Zimmer",
+                            "detailed-description": "SUPERIOR",
+                            "group-identifier": "1afe129cd2fca08dc76510a586c476025cca865fa4561e057ab89365993b7373",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                "travel-date": {
+                    "days": 8,
+                    "departure-date": "2024-10-31",
+                    "nights": 7,
+                    "return-date": "2024-11-07"
+                }
+            },
+            "category": 4,
+            "category-type": "dots",
+            "destination": "Cala Mandia, Mallorca, Spanien",
+            "hotel-id": "3140-giata",
+            "images": [
+                {
+                    "large": "https://image-resizer.prod.invia-travel.io/images/xmldata/3140/org/hotel3140-a9239eec-f4df-4860-8f84-c72f2ab55810.jpeg?width=700&height=525",
+                    "small": "https://image-resizer.prod.invia-travel.io/images/xmldata/3140/org/hotel3140-a9239eec-f4df-4860-8f84-c72f2ab55810.jpeg?width=400&height=300"
+                },
+                {
+                    "large": "https://image-resizer.prod.invia-travel.io/images/multicode/3140/org/hotel3140-cee9bdd1-3152-4f9a-a5f5-bd58e9e731cf.jpeg?width=700&height=525",
+                    "small": "https://image-resizer.prod.invia-travel.io/images/multicode/3140/org/hotel3140-cee9bdd1-3152-4f9a-a5f5-bd58e9e731cf.jpeg?width=400&height=300"
+                },
+                {
+                    "large": "https://image-resizer.prod.invia-travel.io/images/multicode/3140/org/hotel3140-b7a9e133-cf14-4595-a86e-2fdfadee1a2f.jpeg?width=700&height=525",
+                    "small": "https://image-resizer.prod.invia-travel.io/images/multicode/3140/org/hotel3140-b7a9e133-cf14-4595-a86e-2fdfadee1a2f.jpeg?width=400&height=300"
+                }
+            ],
+            "latitude": 39.518116,
+            "longitude": 3.3148189,
+            "name": "Blau Punta Reina",
+            "rating-info": {
+                "recommendation-rate": 0,
+                "reviews-count": 2794,
+                "score": 4.6,
+                "score-description": "Ausgezeichnet"
+            }
+        }
+    ]
+}
