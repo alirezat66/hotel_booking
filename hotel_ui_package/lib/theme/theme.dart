@@ -4,6 +4,7 @@ import 'package:hotel_ui_package/theme/hotel_card_theme.dart';
 import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 
 class HotelBookingTheme {
+  // Shared constants
   static const lightSurface = Color(0xFF002873);
   static const lightScaffold = Colors.white;
   static const foregroundColor = Colors.white;
@@ -13,149 +14,149 @@ class HotelBookingTheme {
   static const lightTertiary = Colors.black;
   static const iconColor = Color(0xFF595959);
 
-  static ThemeData get lightTheme => ThemeData(
-          useMaterial3: true,
-          scaffoldBackgroundColor: lightScaffold,
-          colorScheme: const ColorScheme(
-            brightness: Brightness.light,
-            primary: lightPrimary,
-            onPrimary: foregroundColor,
-            secondary: lightSecondary,
-            onSecondary: foregroundColor,
-            error: Colors.redAccent,
-            onError: foregroundColor,
-            surface: lightSurface,
-            onSurface: foregroundColor,
-            tertiary: lightTertiary,
-          ),
-          textTheme: _getTextTheme(),
-          elevatedButtonTheme: getElevatedButtonTheme(),
-          dividerTheme: _getDividerTheme(),
-          iconTheme: _getIconTheme(),
-          cardTheme: _getCardTheme(),
-          visualDensity: VisualDensity.compact,
-          bottomNavigationBarTheme: _getBottomNavigationBarTheme(),
-          radioTheme: _radioTheme(),
-          extensions: [
-            _getRatingBadgeTheme(),
-            _getHotelCardTheme(),
-          ]);
+  // Dark mode constants
+  static const darkScaffold = Color(0xFF1A1A1A);
+  static const darkSurface = Color(0xFF003087);
+  static const darkForeground = Color(0xFFE0E0E0);
+  static const darkDividerColor = Color(0xFF424242);
+  static const darkIconColor = Color(0xFFB0B0B0);
 
-  static ElevatedButtonThemeData getElevatedButtonTheme() {
+  // Unified ThemeData getter
+  static ThemeData getTheme({required Brightness brightness}) {
+    final isDark = brightness == Brightness.dark;
+    return ThemeData(
+      useMaterial3: true,
+      scaffoldBackgroundColor: isDark ? darkScaffold : lightScaffold,
+      colorScheme: ColorScheme(
+        brightness: brightness,
+        primary: lightPrimary,
+        onPrimary: foregroundColor,
+        secondary: lightSecondary,
+        onSecondary: foregroundColor,
+        error: Colors.redAccent,
+        onError: foregroundColor,
+        surface: isDark ? darkSurface : lightSurface,
+        onSurface: isDark ? darkForeground : foregroundColor,
+        tertiary: isDark ? darkForeground : lightTertiary,
+      ),
+      textTheme: _getTextTheme(isDark: isDark),
+      elevatedButtonTheme: _getElevatedButtonTheme(isDark: isDark),
+      dividerTheme: _getDividerTheme(isDark: isDark),
+      iconTheme: _getIconTheme(isDark: isDark),
+      cardTheme: _getCardTheme(isDark: isDark),
+      visualDensity: VisualDensity.compact,
+      bottomNavigationBarTheme: _getBottomNavigationBarTheme(isDark: isDark),
+      radioTheme: _getRadioTheme(isDark: isDark),
+      extensions: [
+        _getRatingBadgeTheme(), // Same for both modes
+        _getHotelCardTheme(isDark: isDark),
+      ],
+    );
+  }
+
+  // ElevatedButtonTheme
+  static ElevatedButtonThemeData _getElevatedButtonTheme(
+      {required bool isDark}) {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: lightPrimary,
         foregroundColor: Colors.white,
-        disabledBackgroundColor: Colors.grey,
-        disabledForegroundColor: Colors.black,
+        disabledBackgroundColor: isDark ? Colors.grey[800] : Colors.grey,
+        disabledForegroundColor: isDark ? Colors.grey : Colors.black,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
         textStyle: GoogleFonts.openSans(
           fontSize: 14,
           fontWeight: FontWeight.w700,
           letterSpacing: 0,
+          color: isDark ? darkForeground : lightTertiary,
         ),
       ),
     );
   }
 
-  static TextTheme _getTextTheme() {
+  // TextTheme
+  static TextTheme _getTextTheme({required bool isDark}) {
+    final textColor = isDark ? darkForeground : lightTertiary;
     return TextTheme(
       displayLarge: GoogleFonts.openSans(
-          fontSize: 57, // H1
+          fontSize: 57,
           fontWeight: FontWeight.bold,
           letterSpacing: -0.25,
-          color: lightTertiary),
+          color: textColor),
       displayMedium: GoogleFonts.openSans(
-          fontSize: 45, // H2
-          fontWeight: FontWeight.w600,
-          color: lightTertiary),
+          fontSize: 45, fontWeight: FontWeight.w600, color: textColor),
       displaySmall: GoogleFonts.openSans(
-          fontSize: 36, // H3
-          fontWeight: FontWeight.w500,
-          color: lightTertiary),
+          fontSize: 36, fontWeight: FontWeight.w500, color: textColor),
       headlineLarge: GoogleFonts.openSans(
-          fontSize: 32, // H4
-          fontWeight: FontWeight.w500,
-          color: lightTertiary),
+          fontSize: 32, fontWeight: FontWeight.w500, color: textColor),
       headlineMedium: GoogleFonts.openSans(
-          fontSize: 28, // H5
-          fontWeight: FontWeight.w500,
-          color: lightTertiary),
+          fontSize: 28, fontWeight: FontWeight.w500, color: textColor),
       headlineSmall: GoogleFonts.openSans(
-          fontSize: 24, // H6
-          fontWeight: FontWeight.w500,
-          color: lightTertiary),
+          fontSize: 24, fontWeight: FontWeight.w500, color: textColor),
       titleLarge: GoogleFonts.openSans(
-        fontSize: 22,
-        fontWeight: FontWeight.w600,
-        color: lightTertiary,
-      ),
+          fontSize: 22, fontWeight: FontWeight.w600, color: textColor),
       titleMedium: GoogleFonts.openSans(
           fontSize: 16,
           fontWeight: FontWeight.w500,
           letterSpacing: 0.15,
-          color: lightTertiary),
+          color: textColor),
       titleSmall: GoogleFonts.openSans(
-        fontSize: 14,
-        fontWeight: FontWeight.w500,
-        letterSpacing: 0.1,
-        color: lightTertiary,
-      ),
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 0.1,
+          color: textColor),
       bodyLarge: GoogleFonts.openSans(
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
-        letterSpacing: 0.5,
-        color: lightTertiary,
-      ),
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+          letterSpacing: 0.5,
+          color: textColor),
       bodyMedium: GoogleFonts.openSans(
-        fontSize: 14,
-        fontWeight: FontWeight.w400,
-        letterSpacing: 0.25,
-        color: lightTertiary,
-      ),
+          fontSize: 14,
+          fontWeight: FontWeight.w400,
+          letterSpacing: 0.25,
+          color: textColor),
       bodySmall: GoogleFonts.openSans(
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-        letterSpacing: 0.4,
-        color: lightTertiary,
-      ),
+          fontSize: 12,
+          fontWeight: FontWeight.w400,
+          letterSpacing: 0.4,
+          color: textColor),
       labelLarge: GoogleFonts.openSans(
-        fontSize: 14,
-        fontWeight: FontWeight.w500,
-        letterSpacing: 0.1,
-        color: lightTertiary,
-      ),
+          fontSize: 14,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 0.1,
+          color: textColor),
       labelMedium: GoogleFonts.openSans(
-        fontSize: 12,
-        fontWeight: FontWeight.w500,
-        letterSpacing: 0.5,
-        color: lightTertiary,
-      ),
+          fontSize: 12,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 0.5,
+          color: textColor),
       labelSmall: GoogleFonts.openSans(
-        fontSize: 11,
-        fontWeight: FontWeight.w500,
-        letterSpacing: 0.5,
-        color: lightTertiary,
-      ),
+          fontSize: 11,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 0.5,
+          color: textColor),
     );
   }
 
-  static _getDividerTheme() {
-    return const DividerThemeData(
-      color: dividerColor,
+  // DividerTheme
+  static DividerThemeData _getDividerTheme({required bool isDark}) {
+    return DividerThemeData(
+      color: isDark ? darkDividerColor : dividerColor,
       space: 0,
       thickness: 1,
     );
   }
 
-  static _getIconTheme() {
-    return const IconThemeData(
-      color: iconColor,
+  // IconTheme
+  static IconThemeData _getIconTheme({required bool isDark}) {
+    return IconThemeData(
+      color: isDark ? darkIconColor : iconColor,
       size: 24,
     );
   }
 
+  // RatingBadgeTheme (same for both modes)
   static RatingBadgeTheme _getRatingBadgeTheme() {
     return const RatingBadgeTheme(
       verySatisfiedColor: Colors.green,
@@ -166,25 +167,26 @@ class HotelBookingTheme {
     );
   }
 
-  static HotelCardTheme _getHotelCardTheme() {
+  // HotelCardTheme
+  static HotelCardTheme _getHotelCardTheme({required bool isDark}) {
     return HotelCardTheme(
-      titleTextColor: const Color(0xFF222222),
-      subtitleTextColor: const Color(0xFF595959),
-      favoriteIconDeselectedColor: Colors.white,
+      titleTextColor: isDark ? darkForeground : const Color(0xFF222222),
+      subtitleTextColor: isDark ? darkIconColor : const Color(0xFF595959),
+      favoriteIconDeselectedColor: isDark ? darkIconColor : Colors.white,
       favoriteIconSelectedColor: Colors.redAccent,
       cardDecoration: BoxDecoration(
-        color: Colors.white,
+        color: isDark ? const Color(0xFF2A2A2A) : Colors.white,
         borderRadius: BorderRadius.circular(5),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1), // #000000 opacity 10%
-            offset: const Offset(0, 8), // X: 0, Y: 8
+            color: Colors.black.withOpacity(isDark ? 0.2 : 0.1),
+            offset: const Offset(0, 8),
             blurRadius: 24,
             spreadRadius: 0,
           ),
           BoxShadow(
-            color: Colors.black.withOpacity(0.08), // #000000 opacity 8%
-            offset: const Offset(0, 0), // X: 0, Y: 0
+            color: Colors.black.withOpacity(isDark ? 0.15 : 0.08),
+            offset: const Offset(0, 0),
             blurRadius: 24,
             spreadRadius: 0,
           ),
@@ -193,46 +195,44 @@ class HotelBookingTheme {
     );
   }
 
-  static CardTheme _getCardTheme() {
+  // CardTheme
+  static CardTheme _getCardTheme({required bool isDark}) {
     return CardTheme(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(5),
-      ),
+      color: isDark ? const Color(0xFF2A2A2A) : Colors.white,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
     );
   }
 
-  static BottomNavigationBarThemeData _getBottomNavigationBarTheme() {
+  // BottomNavigationBarTheme
+  static BottomNavigationBarThemeData _getBottomNavigationBarTheme(
+      {required bool isDark}) {
+    final textColor = isDark ? darkForeground : lightTertiary;
     return BottomNavigationBarThemeData(
-      backgroundColor: Colors.white,
+      backgroundColor: isDark ? const Color(0xFF2A2A2A) : Colors.white,
       selectedItemColor: lightPrimary,
-      unselectedItemColor: lightTertiary,
+      unselectedItemColor: textColor,
       selectedLabelStyle: GoogleFonts.openSans(
-        fontSize: 12,
-        fontWeight: FontWeight.w600,
-        letterSpacing: 0.5,
-        color: lightTertiary,
-      ),
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+          letterSpacing: 0.5,
+          color: textColor),
       elevation: 2,
       unselectedLabelStyle: GoogleFonts.openSans(
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-        letterSpacing: 0.5,
-        color: lightTertiary,
-      ),
+          fontSize: 12,
+          fontWeight: FontWeight.w400,
+          letterSpacing: 0.5,
+          color: textColor),
     );
   }
 
-  static RadioThemeData _radioTheme() {
+  // RadioTheme
+  static RadioThemeData _getRadioTheme({required bool isDark}) {
     return RadioThemeData(
       fillColor: WidgetStateProperty.resolveWith((states) {
-        if (states.contains(WidgetState.disabled)) {
-          return Colors.grey;
-        } else if (states.contains(WidgetState.selected)) {
-          return lightPrimary;
-        } else {
-          return lightTertiary;
-        }
+        if (states.contains(WidgetState.disabled))
+          return isDark ? Colors.grey[800] : Colors.grey;
+        if (states.contains(WidgetState.selected)) return lightPrimary;
+        return isDark ? darkForeground : lightTertiary;
       }),
     );
   }

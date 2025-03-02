@@ -13,7 +13,9 @@ class WidgetbookHotReload extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Widgetbook.material(
-      lightTheme: HotelBookingTheme.lightTheme,
+      lightTheme: HotelBookingTheme.getTheme(brightness: Brightness.light),
+      darkTheme: HotelBookingTheme.getTheme(brightness: Brightness.dark),
+      themeMode: ThemeMode.system,
       addons: [
         DeviceFrameAddon(
           devices: [
@@ -44,7 +46,6 @@ class WidgetbookHotReload extends StatelessWidget {
           ],
         ),
         WidgetbookFolder(
-          
           name: 'Hotel Card',
           children: [
             getCards(),
@@ -54,7 +55,7 @@ class WidgetbookHotReload extends StatelessWidget {
       appBuilder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: HotelBookingTheme.lightTheme,
+          theme: HotelBookingTheme.getTheme(brightness: Brightness.light),
           locale: const Locale('de', 'DE'),
           supportedLocales: const [
             Locale('en', 'US'),

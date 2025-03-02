@@ -17,5 +17,7 @@
     "invalidResponseFormat": "Invalid response format",
     "failedToFetch": "Failed to fetch hotels",
     "from": "From",
-    "flight": "Flight"
+    "flight": "Flight",
+    "lightTheme": "Light Theme",
+    "darkTheme": "Dark Theme"
 }
