@@ -2,8 +2,9 @@ import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
 extension HotelExtension on Hotel {
-  HotelData toHotelData() {
+  HotelData toHotelData(bool isFavorite) {
     return HotelData(
+      isLiked: isFavorite,
       score: ratingInfo.score,
       reviewCount: ratingInfo.reviewCount,
       scoreDescription: ratingInfo.scoreDescription,
