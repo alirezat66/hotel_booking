@@ -1,4 +1,4 @@
-import 'package:hotel_booking/features/hotels/data/hotel.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
 
 class HotelResponse {
   final List<Hotel> hotels;

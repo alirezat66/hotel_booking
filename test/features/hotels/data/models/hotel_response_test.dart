@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_booking/features/hotels/data/hotel_response.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_response.dart';
 
-import '../../../fixtures/fixture_reader.dart';
+import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
   test('HotelResponse fromJson', () {
