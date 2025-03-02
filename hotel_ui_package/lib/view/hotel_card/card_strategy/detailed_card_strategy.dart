@@ -51,6 +51,8 @@ class DetailedCardStrategy implements CardStrategy {
                 nightText: translateString.nightText,
                 fromText: translateString.fromText,
                 includeFlightText: translateString.flightText,
+                kinderText: translateString.kinderText,
+                adultText: translateString.adultText,
               ),
               const Gap(16),
               SizedBox(
