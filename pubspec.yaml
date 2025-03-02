@@ -23,7 +23,9 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   equatable: ^2.0.7
-  auto_route: ^9.0.3  # Use the latest version
+  auto_route: ^9.0.3 
+  flutter_svg: ^2.0.17
+
 dev_dependencies:
   mockito: ^5.4.4
   flutter_test:

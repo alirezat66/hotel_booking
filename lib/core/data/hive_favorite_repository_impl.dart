@@ -15,7 +15,9 @@ class HiveFavoriteRepositoryImpl implements FavoriteRepository {
 
   @override
   List<HotelFavorite> getFavorites() {
-    return _favoriteBox.values.toList();
+    final list = _favoriteBox.values.toList();
+    list.sort((a, b) => b.createdAt.compareTo(a.createdAt));
+    return list;
   }
 
   @override
