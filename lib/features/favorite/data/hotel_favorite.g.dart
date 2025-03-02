@@ -22,13 +22,14 @@ class HotelFavoriteAdapter extends TypeAdapter<HotelFavorite> {
       hotelId: fields[2] as String,
       ratingInfo: fields[3] as HotelRatingInfo,
       image: fields[4] as String,
+      createdAt: fields[5] as DateTime?,
     );
   }
 
   @override
   void write(BinaryWriter writer, HotelFavorite obj) {
     writer
-      ..writeByte(5)
+      ..writeByte(6)
       ..writeByte(0)
       ..write(obj.name)
       ..writeByte(1)
@@ -38,7 +39,9 @@ class HotelFavoriteAdapter extends TypeAdapter<HotelFavorite> {
       ..writeByte(3)
       ..write(obj.ratingInfo)
       ..writeByte(4)
-      ..write(obj.image);
+      ..write(obj.image)
+      ..writeByte(5)
+      ..write(obj.createdAt);
   }
 
   @override

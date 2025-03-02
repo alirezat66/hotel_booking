@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hotel_booking/core/data/favorite_repository.dart';
 import 'package:hotel_booking/core/data/hive_favorite_repository_impl.dart';
