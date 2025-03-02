@@ -22,13 +22,16 @@ class HotelFavorite extends Equatable {
   @HiveField(4)
   String image;
 
+  @HiveField(5)
+  DateTime createdAt;
+
   HotelFavorite({
     required this.name,
     required this.destination,
     required this.hotelId,
     required this.ratingInfo,
     required this.image,
-  });
+  }) : createdAt = DateTime.now();
 
   factory HotelFavorite.fromHotel(Hotel hotel) {
     return HotelFavorite(
@@ -40,7 +43,7 @@ class HotelFavorite extends Equatable {
     );
   }
   @override
-  List<Object?> get props => [hotelId, name, destination];
+  List<Object?> get props => [hotelId, name, destination, createdAt];
 }
 
 @HiveType(typeId: 1)

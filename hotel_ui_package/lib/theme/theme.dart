@@ -34,6 +34,7 @@ class HotelBookingTheme {
           iconTheme: _getIconTheme(),
           cardTheme: _getCardTheme(),
           visualDensity: VisualDensity.compact,
+          bottomNavigationBarTheme: _getBottomNavigationBarTheme(),
           extensions: [
             _getRatingBadgeTheme(),
             _getHotelCardTheme(),
@@ -60,73 +61,81 @@ class HotelBookingTheme {
   static TextTheme _getTextTheme() {
     return TextTheme(
       displayLarge: GoogleFonts.openSans(
-        fontSize: 57, // H1
-        fontWeight: FontWeight.bold,
-        letterSpacing: -0.25,
-      ),
+          fontSize: 57, // H1
+          fontWeight: FontWeight.bold,
+          letterSpacing: -0.25,
+          color: lightTertiary),
       displayMedium: GoogleFonts.openSans(
-        fontSize: 45, // H2
-        fontWeight: FontWeight.w600,
-      ),
+          fontSize: 45, // H2
+          fontWeight: FontWeight.w600,
+          color: lightTertiary),
       displaySmall: GoogleFonts.openSans(
-        fontSize: 36, // H3
-        fontWeight: FontWeight.w500,
-      ),
+          fontSize: 36, // H3
+          fontWeight: FontWeight.w500,
+          color: lightTertiary),
       headlineLarge: GoogleFonts.openSans(
-        fontSize: 32, // H4
-        fontWeight: FontWeight.w500,
-      ),
+          fontSize: 32, // H4
+          fontWeight: FontWeight.w500,
+          color: lightTertiary),
       headlineMedium: GoogleFonts.openSans(
-        fontSize: 28, // H5
-        fontWeight: FontWeight.w500,
-      ),
+          fontSize: 28, // H5
+          fontWeight: FontWeight.w500,
+          color: lightTertiary),
       headlineSmall: GoogleFonts.openSans(
-        fontSize: 24, // H6
-        fontWeight: FontWeight.w500,
-      ),
+          fontSize: 24, // H6
+          fontWeight: FontWeight.w500,
+          color: lightTertiary),
       titleLarge: GoogleFonts.openSans(
         fontSize: 22,
         fontWeight: FontWeight.w600,
+        color: lightTertiary,
       ),
       titleMedium: GoogleFonts.openSans(
-        fontSize: 16,
-        fontWeight: FontWeight.w500,
-        letterSpacing: 0.15,
-      ),
+          fontSize: 16,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 0.15,
+          color: lightTertiary),
       titleSmall: GoogleFonts.openSans(
         fontSize: 14,
         fontWeight: FontWeight.w500,
         letterSpacing: 0.1,
+        color: lightTertiary,
       ),
       bodyLarge: GoogleFonts.openSans(
         fontSize: 16,
         fontWeight: FontWeight.w400,
         letterSpacing: 0.5,
+        color: lightTertiary,
       ),
       bodyMedium: GoogleFonts.openSans(
         fontSize: 14,
         fontWeight: FontWeight.w400,
         letterSpacing: 0.25,
+        color: lightTertiary,
       ),
       bodySmall: GoogleFonts.openSans(
         fontSize: 12,
         fontWeight: FontWeight.w400,
         letterSpacing: 0.4,
+        color: lightTertiary,
       ),
       labelLarge: GoogleFonts.openSans(
         fontSize: 14,
         fontWeight: FontWeight.w500,
         letterSpacing: 0.1,
+        color: lightTertiary,
       ),
       labelMedium: GoogleFonts.openSans(
         fontSize: 12,
         fontWeight: FontWeight.w500,
         letterSpacing: 0.5,
+        color: lightTertiary,
       ),
       labelSmall: GoogleFonts.openSans(
         fontSize: 11,
         fontWeight: FontWeight.w500,
         letterSpacing: 0.5,
+        color: lightTertiary,
       ),
     );
   }
@@ -188,6 +197,27 @@ class HotelBookingTheme {
       color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(5),
+      ),
+    );
+  }
+
+  static BottomNavigationBarThemeData _getBottomNavigationBarTheme() {
+    return BottomNavigationBarThemeData(
+      backgroundColor: Colors.white,
+      selectedItemColor: lightPrimary,
+      unselectedItemColor: lightTertiary,
+      selectedLabelStyle: GoogleFonts.openSans(
+        fontSize: 12,
+        fontWeight: FontWeight.w600,
+        letterSpacing: 0.5,
+        color: lightTertiary,
+      ),
+      elevation: 2,
+      unselectedLabelStyle: GoogleFonts.openSans(
+        fontSize: 12,
+        fontWeight: FontWeight.w400,
+        letterSpacing: 0.5,
+        color: lightTertiary,
       ),
     );
   }
