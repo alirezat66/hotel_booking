@@ -9,10 +9,6 @@ mixin ScoreRangeBasedLevel on SatisfactionLevel {
     maxScore = max;
   }
 
-  double getMidpoint() {
-    return (minScore + maxScore) / 2;
-  }
-
   @override
   bool isInRange(double score) => score >= minScore && score < maxScore;
 }

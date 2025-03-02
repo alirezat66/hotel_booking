@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hotel_ui_package/theme/theme.dart';
 import 'package:hotel_ui_package/view/favorite_widget.dart';
 
 class MockHotelCardTheme {
@@ -131,7 +132,6 @@ void main() {
       expect(widgetState.circleController.isDismissed, true);
     });
 
-  
     testWidgets('animations do not run when tapping on already liked widget',
         (WidgetTester tester) async {
       // Arrange
@@ -221,5 +221,51 @@ void main() {
       await tester.pump();
       // No assertion needed - test passes if no exception is thrown
     });
+  });
+
+  testWidgets('runLikeAnimation completes all phases',
+      (WidgetTester tester) async {
+    // Pump the widget with a theme providing HotelCardTheme
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: HotelBookingTheme.lightTheme, // Provides hotelCardTheme
+        home: Scaffold(
+          body: FavoriteWidget(
+            initialState: false,
+            onLikeChanged: (newValue) {},
+            size: 24,
+          ),
+        ),
+      ),
+    );
+
+    // Get the state to access controllers
+    final state =
+        tester.state<FavoriteWidgetState>(find.byType(FavoriteWidget));
+
+    // Verify initial state
+    expect(state.circleController.value, 0.0); // Circle animation starts at 0
+    expect(state.vibrationController.value,
+        0.0); // Vibration starts at 1.0 (begin)
+
+    // Trigger the animation via tap
+    await tester.tap(find.byType(InkWell));
+    await tester.pump(); // Start the animation
+
+    // Step 1: Test circle forward (300ms)
+    expect(state.circleController.isAnimating, true);
+    await tester.pump(const Duration(milliseconds: 300)); // Complete forward
+    expect(state.circleController.isForwardOrCompleted, true);
+    expect(state.circleController.value, 1.0); // End of forward animation
+
+    // Step 2: Test circle reverse (300ms more, total 600ms)
+    await tester.pump(); // Start reverse
+    expect(state.circleController.isAnimating, true);
+    await tester.pumpAndSettle(const Duration(milliseconds: 300));
+    print('Circle value: ${state.circleController.value}');
+    print(
+        'Circle status: ${state.circleController.status}'); // Complete forward
+    expect(state.circleController.isDismissed, true); // Now should pass
+    expect(state.circleController.value, 0.0); // Back to start
   });
 }

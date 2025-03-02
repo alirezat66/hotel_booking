@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hotel_ui_package/view/hotel_card/widgets/info/detail/price_widget.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
 
 void main() {
+  setUpAll(() {
+    // Enable runtime fetching for tests
+    GoogleFonts.config.allowRuntimeFetching = true;
+  });
   testWidgets('PriceWidget displays total and per person prices correctly',
       (WidgetTester tester) async {
     // Define the test data

@@ -10,7 +10,9 @@ import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 abstract class SatisfactionLevel {
   final IconData icon;
 
-  const SatisfactionLevel({required this.icon,});
+  const SatisfactionLevel({
+    required this.icon,
+  });
 
   /// Determines if the score falls within this level's range
   bool isInRange(double score);
@@ -45,14 +47,6 @@ abstract class SatisfactionLevel {
       _recalculateScoreRanges();
       _initialized = true;
     }
-  }
-
-  /// Reset to default levels
-  static void resetToDefaults() {
-    _predefinedLevels.clear();
-    _predefinedLevels.addAll(_defaultLevels);
-    _recalculateScoreRanges();
-    _initialized = true;
   }
 
   /// Dynamically calculated min/max scores
@@ -109,8 +103,8 @@ abstract class SatisfactionLevel {
     // Find closest level if none matches exactly
     return _predefinedLevels.reduce((current, next) {
       if (current is ScoreRangeBasedLevel && next is ScoreRangeBasedLevel) {
-        double currentMid = (current).getMidpoint();
-        double nextMid = (next).getMidpoint();
+        double currentMid = (current.minScore + current.maxScore) / 2;
+        double nextMid = (next.minScore + next.maxScore) / 2;
         return (score - currentMid).abs() < (score - nextMid).abs()
             ? current
             : next;

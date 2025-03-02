@@ -6,8 +6,11 @@ import 'package:hotel_ui_package/theme/rating_badge_theme.dart';
 import 'package:hotel_ui_package/theme/hotel_card_theme.dart';
 
 void main() {
+  setUpAll(() {
+    // Enable runtime fetching for tests
+    GoogleFonts.config.allowRuntimeFetching = true;
+  });
   TestWidgetsFlutterBinding.ensureInitialized();
-  setUp(() => GoogleFonts.config.allowRuntimeFetching = false);
 
   group('HotelBookingTheme', () {
     test('lightTheme has correct color scheme', () {

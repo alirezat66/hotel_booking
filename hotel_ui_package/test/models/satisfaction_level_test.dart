@@ -18,6 +18,26 @@ class CustomLevel extends SatisfactionLevel with ScoreRangeBasedLevel {
   Color getColor(RatingBadgeTheme theme) => Colors.purple;
 }
 
+class BottomLevel extends SatisfactionLevel with ScoreRangeBasedLevel {
+  BottomLevel() : super(icon: Icons.star);
+  @override
+  double get minScore => 0;
+  @override
+  double get maxScore => 2;
+  @override
+  Color getColor(RatingBadgeTheme theme) => Colors.purple;
+}
+
+class TopLevel extends SatisfactionLevel with ScoreRangeBasedLevel {
+  TopLevel() : super(icon: Icons.star);
+  @override
+  double get minScore => 3;
+  @override
+  double get maxScore => 5;
+  @override
+  Color getColor(RatingBadgeTheme theme) => Colors.purple;
+}
+
 void main() {
   final ratingBadgeTheme = const RatingBadgeTheme(
     verySatisfiedColor: Colors.blue,
@@ -123,9 +143,15 @@ void main() {
       // Test exact boundaries
       expect(SatisfactionLevel.fromScore(0.0), isA<VeryDissatisfiedLevel>());
       expect(SatisfactionLevel.fromScore(1.0), isA<DissatisfiedLevel>());
+      expect(SatisfactionLevel.fromScore(1.5), isA<DissatisfiedLevel>());
+      expect(SatisfactionLevel.fromScore(1.7), isA<DissatisfiedLevel>());
       expect(SatisfactionLevel.fromScore(2.0), isA<NeutralLevel>());
+      expect(SatisfactionLevel.fromScore(2.4), isA<NeutralLevel>());
+      expect(SatisfactionLevel.fromScore(2.5), isA<NeutralLevel>());
+      expect(SatisfactionLevel.fromScore(2.6), isA<NeutralLevel>());
       expect(SatisfactionLevel.fromScore(3.0), isA<SatisfiedLevel>());
       expect(SatisfactionLevel.fromScore(4.0), isA<VerySatisfiedLevel>());
+      expect(SatisfactionLevel.fromScore(4.5), isA<VerySatisfiedLevel>());
       expect(SatisfactionLevel.fromScore(5.0), isA<VerySatisfiedLevel>());
 
       // Test out of range values
@@ -136,17 +162,47 @@ void main() {
     test('fromScore works with fewer levels', () {
       // Set only 3 levels
       SatisfactionLevel.setLevels([
-        VeryDissatisfiedLevel(),
-        NeutralLevel(),
-        VerySatisfiedLevel(),
+        BottomLevel(),
+        TopLevel(),
       ]);
 
       // Check that ranges are distributed across 3 levels (step = 5.0/3 ≈ 1.67)
-      expect(SatisfactionLevel.fromScore(0.0), isA<VeryDissatisfiedLevel>());
-      expect(SatisfactionLevel.fromScore(1.0), isA<VeryDissatisfiedLevel>());
-      expect(SatisfactionLevel.fromScore(1.7), isA<NeutralLevel>());
-      expect(SatisfactionLevel.fromScore(3.4), isA<VerySatisfiedLevel>());
-      expect(SatisfactionLevel.fromScore(5.0), isA<VerySatisfiedLevel>());
+      expect(SatisfactionLevel.fromScore(0.0), isA<BottomLevel>());
+      expect(SatisfactionLevel.fromScore(1.0), isA<BottomLevel>());
+      expect(SatisfactionLevel.fromScore(1.5), isA<BottomLevel>());
+      expect(SatisfactionLevel.fromScore(1.7), isA<BottomLevel>());
+      expect(SatisfactionLevel.fromScore(2.5), isA<TopLevel>());
+      expect(SatisfactionLevel.fromScore(3.4), isA<TopLevel>());
+      expect(SatisfactionLevel.fromScore(5.0), isA<TopLevel>());
+    });
+
+    test('reduce method selects the closest level based on score', () {
+      SatisfactionLevel.setLevels([
+        VeryDissatisfiedLevel(),
+        DissatisfiedLevel(),
+        NeutralLevel(),
+        SatisfiedLevel(),
+        VerySatisfiedLevel(),
+      ]);
+
+      // Force recalculation
+      SatisfactionLevel.fromScore(2.5);
+
+      final levels = SatisfactionLevel.levels;
+
+      // Check that the reduce method selects the correct level
+      final closestLevel = levels.reduce((current, next) {
+        if (current is ScoreRangeBasedLevel && next is ScoreRangeBasedLevel) {
+          double currentMid = (current.minScore + current.maxScore) / 2;
+          double nextMid = (next.minScore + next.maxScore) / 2;
+          return (2.5 - currentMid).abs() < (2.5 - nextMid).abs()
+              ? current
+              : next;
+        }
+        return current;
+      });
+
+      expect(closestLevel, isA<NeutralLevel>());
     });
   });
 

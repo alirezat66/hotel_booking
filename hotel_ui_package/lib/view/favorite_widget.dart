@@ -43,7 +43,7 @@ class FavoriteWidgetState extends State<FavoriteWidget>
       onTap: widget.onLikeChanged != null
           ? () {
               if (!widget.initialState) {
-                _runLikeAnimation();
+                runLikeAnimation();
               }
               widget.onLikeChanged!(!widget.initialState);
             }
@@ -88,7 +88,7 @@ class FavoriteWidgetState extends State<FavoriteWidget>
     );
   }
 
-  void _runLikeAnimation() async {
+  void runLikeAnimation() async {
     await circleController.forward();
     await circleController.reverse();
 

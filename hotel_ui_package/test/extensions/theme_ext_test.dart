@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hotel_ui_package/extensions/theme_ext.dart';
 import 'package:hotel_ui_package/theme/theme.dart';
 
 void main() {
+  setUpAll(() {
+    // Enable runtime fetching for tests
+    GoogleFonts.config.allowRuntimeFetching = true;
+  });
   TestWidgetsFlutterBinding.ensureInitialized();
 
   group('BuildContextExt', () {
@@ -22,7 +27,13 @@ void main() {
               expect(context.colorScheme.onSurface,
                   HotelBookingTheme.foregroundColor);
 
-              // Test text theme
+              // Test primary color
+              expect(context.primaryColor, HotelBookingTheme.lightPrimary);
+
+              // Test surface color
+              expect(context.surface, HotelBookingTheme.lightSurface);
+
+              // Test individual text styles
               expect(context.displayLarge.fontSize, 57);
               expect(context.displayMedium.fontSize, 45);
               expect(context.displaySmall.fontSize, 36);
@@ -38,7 +49,9 @@ void main() {
               expect(context.labelLarge.fontSize, 14);
               expect(context.labelMedium.fontSize, 12);
               expect(context.labelSmall.fontSize, 11);
-
+              final textTheme = context.textTheme;
+              // Test text theme object against the merged theme
+              expect(textTheme.bodyLarge?.fontSize, 16);
               return Container();
             },
           ),
