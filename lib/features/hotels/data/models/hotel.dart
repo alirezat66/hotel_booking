@@ -1,3 +1,5 @@
+import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
+
 class Hotel {
   final String name;
   final String destination;
@@ -25,26 +27,6 @@ class Hotel {
       images: (json['images'] as List<dynamic>)
           .map((image) => (image['large'] as String).split('?')[0])
           .toList(),
-    );
-  }
-}
-
-class HotelRatingInfo {
-  final double score;
-  final int reviewCount;
-  final String scoreDescription;
-
-  HotelRatingInfo({
-    required this.score,
-    required this.reviewCount,
-    required this.scoreDescription,
-  });
-
-  factory HotelRatingInfo.fromJson(Map<String, dynamic> json) {
-    return HotelRatingInfo(
-      score: double.tryParse(json['score'].toString()) ?? 0.0,
-      reviewCount: json['reviews-count'],
-      scoreDescription: json['score-description'],
     );
   }
 }

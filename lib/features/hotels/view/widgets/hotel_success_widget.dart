@@ -32,7 +32,7 @@ class HotelSuccessWidget extends StatelessWidget {
           hotels: hotels,
           cardType: HotelCardType.detailed,
           onActionPressed: () {},
-          onFavoriteChange: (isFavorite){},
+          onFavoriteChange: (isFavorite) {},
         ),
       ],
     );
