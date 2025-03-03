@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/widgets.dart';
 import 'package:hotel_booking/features/account/account_page.dart';
-import 'package:hotel_booking/features/favorite/view/favorite_page.dart';
-import 'package:hotel_booking/features/hotels/view/hotel_page.dart';
+import 'package:hotel_booking/features/favorite/presentation/view/favorite_page.dart';
+import 'package:hotel_booking/features/hotels/presentation/view/hotel_page.dart';
 import 'package:hotel_booking/features/overview/overview_page.dart';
 import 'package:hotel_booking/main.dart';
 part 'app_router.gr.dart'; // Generated file

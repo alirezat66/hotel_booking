@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:hotel_booking/core/extension/hotel_favorite_ext.dart';
-import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
+import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
 import 'package:hotel_ui_package/view/hotel_card/hotel_card.dart';
 import 'package:hotel_ui_package/view/hotel_card/hotel_card_type.dart';
 

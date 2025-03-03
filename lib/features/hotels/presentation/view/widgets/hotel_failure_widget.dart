@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
+import 'package:hotel_booking/features/hotels/presentation/cubit/hotel_cubit.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
 class HotelFailureWidget extends StatelessWidget {

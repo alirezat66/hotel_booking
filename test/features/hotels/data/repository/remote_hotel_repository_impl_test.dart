@@ -4,7 +4,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:hotel_booking/core/network/api_client.dart';
 import 'package:hotel_booking/features/hotels/data/models/hotel_response.dart';
-import 'package:hotel_booking/features/hotels/data/repository/remote_hotel_repository_impl.dart';
+import 'package:hotel_booking/features/hotels/data/datasource/remote_data_source.dart';
 
 import '../../../../fixtures/fixture_reader.dart';
 import 'remote_hotel_repository_impl_test.mocks.dart';

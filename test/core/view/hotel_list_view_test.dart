@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hotel_booking/core/widgets/hotel_list_view.dart';
-import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
+import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 import 'package:mockito/mockito.dart';
 
@@ -12,7 +12,7 @@ import '../../features/favorite/view/favorite_page_test.mocks.dart';
 
 void main() {
   late MockFavoriteCubit mockFavoriteCubit;
-  late List<Hotel> testHotels;
+  late List<HotelModel> testHotels;
 
   setUp(() {
     mockFavoriteCubit = MockFavoriteCubit();
@@ -20,7 +20,7 @@ void main() {
     when(mockFavoriteCubit.stream).thenAnswer((_) => Stream.value([]));
 
     testHotels = [
-      Hotel(
+      HotelModel(
         name: 'Hotel A',
         destination: 'City A',
         hotelId: '1',

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
-import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
-import 'package:hotel_booking/features/hotels/view/hotel_page.dart';
-import 'package:hotel_booking/features/hotels/view/widgets/hotel_failure_widget.dart';
-import 'package:hotel_booking/features/hotels/view/widgets/hotel_loading_widget.dart';
-import 'package:hotel_booking/features/hotels/view/widgets/hotel_success_widget.dart';
+import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
+import 'package:hotel_booking/features/hotels/presentation/cubit/hotel_cubit.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
+import 'package:hotel_booking/features/hotels/presentation/view/hotel_page.dart';
+import 'package:hotel_booking/features/hotels/presentation/view/widgets/hotel_failure_widget.dart';
+import 'package:hotel_booking/features/hotels/presentation/view/widgets/hotel_loading_widget.dart';
+import 'package:hotel_booking/features/hotels/presentation/view/widgets/hotel_success_widget.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 import 'package:mockito/mockito.dart';
 
@@ -19,7 +19,7 @@ import 'hotel_page_test.mocks.dart';
 void main() {
   late MockHotelCubit mockHotelCubit;
   late MockFavoriteCubit mockFavoriteCubit;
-  late List<Hotel> testHotels;
+  late List<HotelModel> testHotels;
 
   setUp(() {
     mockHotelCubit = MockHotelCubit();
@@ -28,7 +28,7 @@ void main() {
 
     // Create test hotel data
     testHotels = [
-      Hotel(
+      HotelModel(
         name: 'Hotel A',
         destination: 'City A',
         hotelId: '1',
@@ -144,7 +144,7 @@ void _setupMockitoDummies() {
   provideDummy<HotelState>(HotelLoading());
 
   // Provide dummies for concrete state classes
-  final dummyHotels = <Hotel>[];
+  final dummyHotels = <HotelModel>[];
   provideDummy<HotelSuccess>(HotelSuccess(dummyHotels, 0));
   provideDummy<HotelFailure>(HotelFailure('dummy error'));
 }

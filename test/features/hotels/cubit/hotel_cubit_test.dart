@@ -1,10 +1,10 @@
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
-import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
+import 'package:hotel_booking/features/hotels/presentation/cubit/hotel_cubit.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
 import 'package:hotel_booking/features/hotels/data/models/hotel_response.dart';
-import 'package:hotel_booking/features/hotels/data/repository/hotel_repository.dart';
+import 'package:hotel_booking/features/hotels/data/repository/hotel_repository_impl.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
@@ -17,7 +17,7 @@ void main() {
   late MockHotelRepository mockHotelRepository;
 
   // Sample hotel data for testing
-  final testHotel = Hotel(
+  final testHotel = HotelModel(
     name: 'Test Hotel',
     destination: 'Test Destination',
     hotelId: '123',

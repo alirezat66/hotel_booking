@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_booking/core/bloc/bloc_observer.dart';
 import 'package:hotel_booking/core/di/service_locator.dart';
-import 'package:hotel_booking/core/route/app_router.dart';
+import 'package:hotel_booking/core/navigation/app_router.dart';
 import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
 import 'package:hotel_booking/features/account/bloc/theme_bloc.dart';
-import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
-import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
+import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
+import 'package:hotel_booking/features/hotels/presentation/cubit/hotel_cubit.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
 Future<void> main() async {
@@ -62,7 +62,8 @@ class MyApp extends StatelessWidget {
                 localizationsDelegates: context.localizationDelegates,
                 supportedLocales: context.supportedLocales,
                 locale: locale,
-                routerConfig: AppRouter().config(),
+                routerConfig: AppRouter()
+                    .config(navigatorObservers: () => [AutoRouteObserver()]),
               );
             },
           );

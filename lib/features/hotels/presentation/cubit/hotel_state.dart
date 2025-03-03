@@ -5,7 +5,7 @@ sealed class HotelState {}
 final class HotelLoading extends HotelState {}
 
 final class HotelSuccess extends HotelState {
-  final List<Hotel> hotels;
+  final List<HotelModel> hotels;
   final int numberOfHotels;
   HotelSuccess(this.hotels, this.numberOfHotels);
 }

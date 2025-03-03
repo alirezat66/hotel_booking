@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
-import 'package:hotel_booking/features/favorite/view/favorite_list_view.dart';
-import 'package:hotel_booking/features/favorite/view/widgets/favorite_empty_view.dart';
+import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
+import 'package:hotel_booking/features/favorite/presentation/view/favorite_list_view.dart';
+import 'package:hotel_booking/features/favorite/presentation/view/widgets/favorite_empty_view.dart';
 
 @RoutePage()
 class FavoritePage extends StatelessWidget {

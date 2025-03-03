@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_booking/core/widgets/hotel_list_view.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
-import 'package:hotel_booking/features/hotels/view/widgets/hotel_list_header.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
+import 'package:hotel_booking/features/hotels/presentation/view/widgets/hotel_list_header.dart';
 import 'package:hotel_ui_package/view/hotel_card/hotel_card_type.dart';
 
 class HotelSuccessWidget extends StatelessWidget {
-  final List<Hotel> hotels;
+  final List<HotelModel> hotels;
   final int numberOfHotels;
   const HotelSuccessWidget(
       {super.key, required this.hotels, required this.numberOfHotels});

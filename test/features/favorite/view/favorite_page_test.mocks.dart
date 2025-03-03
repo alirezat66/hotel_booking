@@ -6,12 +6,14 @@
 import 'dart:async' as _i5;
 
 import 'package:flutter_bloc/flutter_bloc.dart' as _i7;
-import 'package:hotel_booking/core/data/favorite_repository.dart' as _i2;
-import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart'
+import 'package:hotel_booking/core/data/repository/favorite_repository.dart'
+    as _i2;
+import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart'
     as _i3;
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart'
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart'
     as _i4;
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart' as _i6;
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart'
+    as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -77,7 +79,7 @@ class MockFavoriteCubit extends _i1.Mock implements _i3.FavoriteCubit {
       ) as bool);
 
   @override
-  void addFavorite(_i6.Hotel? hotel) => super.noSuchMethod(
+  void addFavorite(_i6.HotelModel? hotel) => super.noSuchMethod(
         Invocation.method(
           #addFavorite,
           [hotel],
@@ -162,7 +164,7 @@ class MockFavoriteCubit extends _i1.Mock implements _i3.FavoriteCubit {
 class MockFavoriteRepository extends _i1.Mock
     implements _i2.FavoriteRepository {
   @override
-  _i5.Future<void> addFavorite(_i6.Hotel? hotel) => (super.noSuchMethod(
+  _i5.Future<void> addFavorite(_i6.HotelModel? hotel) => (super.noSuchMethod(
         Invocation.method(
           #addFavorite,
           [hotel],

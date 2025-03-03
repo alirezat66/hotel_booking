@@ -1,4 +1,4 @@
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
 import 'package:hotel_ui_package/models/hotel_data.dart';
 
 extension HotelFavoriteExtension on HotelFavorite {

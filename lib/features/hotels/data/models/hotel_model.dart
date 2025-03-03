@@ -1,6 +1,6 @@
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
 
-class Hotel {
+class HotelModel {
   final String name;
   final String destination;
   final String hotelId;
@@ -8,7 +8,7 @@ class Hotel {
   HotelBestOffer bestOffer;
   List<String> images;
 
-  Hotel({
+  HotelModel({
     required this.name,
     required this.destination,
     required this.hotelId,
@@ -17,8 +17,8 @@ class Hotel {
     required this.images,
   });
 
-  factory Hotel.fromJson(Map<String, dynamic> json) {
-    return Hotel(
+  factory HotelModel.fromJson(Map<String, dynamic> json) {
+    return HotelModel(
       name: json['name'],
       destination: json['destination'],
       hotelId: json['hotel-id'],

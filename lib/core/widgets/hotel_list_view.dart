@@ -1,13 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_booking/core/extension/hotel_ext.dart';
-import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
+import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 
 class HotelListView extends StatelessWidget {
-  final List<Hotel> hotels;
+  final List<HotelModel> hotels;
   final HotelCardType cardType;
   final Function(bool)? onFavoriteChange;
   final VoidCallback? onActionPressed;
@@ -37,14 +37,13 @@ class HotelListView extends StatelessWidget {
               buildWhen: (previous, current) {
                 return current
                         .any((element) => element.hotelId == hotel.hotelId) ||
-                    previous
-                        .any((element) => element.hotelId == hotel.hotelId);
+                    previous.any((element) => element.hotelId == hotel.hotelId);
               },
               builder: (context, state) {
                 return HotelCard(
                   cardType: cardType,
-                  hotel: hotel.toHotelData(state
-                      .any((element) => element.hotelId == hotel.hotelId)),
+                  hotel: hotel.toHotelData(
+                      state.any((element) => element.hotelId == hotel.hotelId)),
                   onFavoriteChanged: (isFavorite) {
                     if (isFavorite) {
                       context.read<FavoriteCubit>().addFavorite(hotel);

@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
-import 'package:hotel_booking/features/hotels/view/widgets/factory/hotel_state_widget_factory.dart';
+import 'package:hotel_booking/features/hotels/presentation/cubit/hotel_cubit.dart';
+import 'package:hotel_booking/features/hotels/presentation/view/widgets/factory/hotel_state_widget_factory.dart';
 
 @RoutePage()
 class HotelPage extends StatelessWidget {

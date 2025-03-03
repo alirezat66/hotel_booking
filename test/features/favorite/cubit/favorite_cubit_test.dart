@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_booking/core/data/favorite_repository.dart';
-import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
+import 'package:hotel_booking/core/data/repository/favorite_repository.dart';
+import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'favorite_cubit_test.mocks.dart';
@@ -25,7 +25,7 @@ void main() {
     streamController.close();
   });
 
-  final testHotel = Hotel(
+  final testHotel = HotelModel(
     name: 'Test Hotel',
     destination: 'Test City',
     hotelId: '123',

@@ -5,10 +5,12 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i3;
 
-import 'package:hotel_booking/core/data/favorite_repository.dart' as _i2;
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart'
+import 'package:hotel_booking/core/data/repository/favorite_repository.dart'
+    as _i2;
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart'
     as _i5;
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart' as _i4;
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart'
+    as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -30,7 +32,7 @@ import 'package:mockito/mockito.dart' as _i1;
 class MockFavoriteRepository extends _i1.Mock
     implements _i2.FavoriteRepository {
   @override
-  _i3.Future<void> addFavorite(_i4.Hotel? hotel) => (super.noSuchMethod(
+  _i3.Future<void> addFavorite(_i4.HotelModel? hotel) => (super.noSuchMethod(
         Invocation.method(
           #addFavorite,
           [hotel],

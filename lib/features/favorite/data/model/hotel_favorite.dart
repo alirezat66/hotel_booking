@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:hive/hive.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
 
 part 'hotel_favorite.g.dart'; // Generated file after running build_runner
 
@@ -34,7 +34,7 @@ class HotelFavorite extends Equatable {
     this.createdAt,
   });
 
-  factory HotelFavorite.fromHotel(Hotel hotel, {DateTime? createdAt}) {
+  factory HotelFavorite.fromHotel(HotelModel hotel, {DateTime? createdAt}) {
     return HotelFavorite(
       name: hotel.name,
       destination: hotel.destination,

@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hive/hive.dart';
-import 'package:hotel_booking/core/data/hive_favorite_repository_impl.dart';
-import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
+import 'package:hotel_booking/features/favorite/data/datasource/local_data_source.dart';
+import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'hive_favorite_repository_impl_test.mocks.dart';
@@ -18,7 +18,7 @@ void main() {
   });
 
   group('HiveFavoriteRepositoryImpl', () {
-    final testHotel = Hotel(
+    final testHotel = HotelModel(
       name: 'Test Hotel',
       destination: 'Test City',
       hotelId: '123',
@@ -104,6 +104,5 @@ void main() {
       // Assert
       verify(mockBox.delete(testHotel.hotelId)).called(1);
     });
-
   });
 }
