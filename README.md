@@ -20,7 +20,7 @@ I should mentioned I separated UI widgets as a separated package with name **hot
 
 ## Clean Architecture
 
-Although I usually work with recomanded architecture of flutter (MMVM), For this project I switch to Clean Architecture, both of these two architectures, have same goal: separation Bussiness with Logic implementation. Although test development is most easier in CleanArchitecture, It has more additional codes. I prevent to implement entities in my implementation. 
+Although I usually work with recomanded architecture of flutter (MVVM), For this project I switch to Clean Architecture, both of these two architectures, have same goal: separation Business with Logic implementation. Although test development is most easier in CleanArchitecture, It has more additional codes. I prevent to implement entities in my implementation. 
 
 ## Libraries Used
 
@@ -74,8 +74,12 @@ For API calls, we use **dio** along with **pretty_dio_logger** for logging netwo
 ## Design Patterns
 During working on project, I found three part of coding suitable for using design patterns.
 
-We have to Card type in app (compacted and detailed). Although you can easily use an if-else and just implement two separated widget I challenged my selfe to make it more expandable and reusable structure.
+We have to Card type in app (compacted and detailed). Although you can easily use an if-else and just implement two separated widget I challenged myself to make it more expandable and reusable structure.
 because of that I combined Factory and Strategy Design Patterns. 
+
+![compacted card](https://github.com/alirezat66/hotel_booking/blob/clean_architecture/assets/compacted.png)
+
+![detailed card](https://github.com/alirezat66/hotel_booking/blob/clean_architecture/assets/detailed.png)
 ### Strategy and Factory
 
 
@@ -138,7 +142,7 @@ you just need add it here in this map with name of strategies. Strategies could 
 We also could implement it with component-based architecture, I mean you can create a component with name of CardComponent and a HotelCard created with couple of components but I prefer doing this approach.
 
 ### Algorithm
-The other part that I liked, was related to Satisfication level, since we had different badge, with different color and different icons (green,yeallo, red) or (dark green, green, yellow,light red, red)
+The other part that I liked, was related to Satisfaction level, since we had different badge, with different color and different icons (green,yellow, red) or (dark green, green, yellow,light red, red)
 
 what happens if we want to change range and also colors or icons????
 ```dart
