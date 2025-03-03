@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:hotel_booking/features/hotels/data/models/hotel.dart';
+import 'package:hotel_booking/features/hotels/data/models/hotel_model.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
 import 'package:hotel_ui_package/models/translate_strings.dart';
 
-extension HotelExtension on Hotel {
+extension HotelExtension on HotelModel {
   HotelData toHotelData(bool isFavorite) {
     return HotelData(
         isLiked: isFavorite,
