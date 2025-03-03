@@ -6,18 +6,22 @@ import 'package:hotel_booking/features/hotels/presentation/view/widgets/hotel_su
 
 class HotelStateWidgetFactory {
   static Widget build(HotelState state) {
-    if (state is HotelLoading) {
-      return const HotelLoadingWidget();
-    } else if (state is HotelSuccess) {
-      return HotelSuccessWidget(
-        hotels: state.hotels,
-        numberOfHotels: state.numberOfHotels,
-      );
-    } else if (state is HotelFailure) {
-      return HotelFailureWidget(
-        errorMessage: state.errorMessage,
-      );
+    switch (state.runtimeType) {
+      case const (HotelLoading):
+        return const HotelLoadingWidget();
+      case const (HotelSuccess):
+        final successState = state as HotelSuccess;
+        return HotelSuccessWidget(
+          hotels: successState.hotels,
+          numberOfHotels: successState.numberOfHotels,
+        );
+      case const (HotelFailure):
+        final failureState = state as HotelFailure;
+        return HotelFailureWidget(
+          errorMessage: failureState.errorMessage,
+        );
+      default:
+        return const HotelLoadingWidget();
     }
-    return const Center(child: Text('Unknown State'));
   }
 }
