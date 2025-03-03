@@ -19,5 +19,6 @@
     "from": "From",
     "flight": "Flight",
     "lightTheme": "Light Theme",
-    "darkTheme": "Dark Theme"
+    "darkTheme": "Dark Theme",
+    "selectTheme": "Select Theme"
 }

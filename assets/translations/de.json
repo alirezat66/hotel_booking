@@ -17,5 +17,8 @@
     "invalidResponseFormat": "Ungültiges Antwortformat",
     "failedToFetch": "Abrufen der Hotels fehlgeschlagen",
     "from": "ab",
-    "flight": "Flug"
+    "flight": "Flug",
+    "lightTheme": "Helles Thema",
+    "darkTheme": "Dunkles Thema",
+    "selectTheme": "Thema auswählen"
 }

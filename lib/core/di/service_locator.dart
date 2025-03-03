@@ -8,6 +8,7 @@ import 'package:hotel_booking/core/network/api_client.dart';
 import 'package:hotel_booking/core/network/config/client_config.dart';
 import 'package:hotel_booking/core/network/dio_client.dart';
 import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
+import 'package:hotel_booking/features/account/bloc/theme_bloc.dart';
 import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
 import 'package:hotel_booking/features/favorite/data/hotel_favorite.dart';
 import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
@@ -68,5 +69,7 @@ class ServiceLocator {
           : HydratedStorageDirectory((await getTemporaryDirectory()).path),
     );
     locator.registerFactory<LocaleBloc>(() => LocaleBloc());
+
+    locator.registerLazySingleton(() => locator<ThemeBloc>().state);
   }
 }

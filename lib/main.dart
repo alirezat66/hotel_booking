@@ -6,6 +6,7 @@ import 'package:hotel_booking/core/bloc/bloc_observer.dart';
 import 'package:hotel_booking/core/di/service_locator.dart';
 import 'package:hotel_booking/core/route/app_router.dart';
 import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
+import 'package:hotel_booking/features/account/bloc/theme_bloc.dart';
 import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
 import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
@@ -41,13 +42,19 @@ class MyApp extends StatelessWidget {
       child: BlocBuilder<LocaleBloc, Locale>(
         builder: (context, locale) {
           context.setLocale(locale);
-          return MaterialApp.router(
-            title: 'Flutter Demo',
-            theme: HotelBookingTheme.lightTheme,
-            localizationsDelegates: context.localizationDelegates,
-            supportedLocales: context.supportedLocales,
-            locale: locale,
-            routerConfig: AppRouter().config(),
+          return BlocBuilder<ThemeBloc, Brightness>(
+            builder: (context, brightness) {
+              return MaterialApp.router(
+                title: 'Flutter Demo',
+                theme: HotelBookingTheme.getTheme(brightness: brightness),
+                darkTheme:
+                    HotelBookingTheme.getTheme(brightness: Brightness.dark),
+                localizationsDelegates: context.localizationDelegates,
+                supportedLocales: context.supportedLocales,
+                locale: locale,
+                routerConfig: AppRouter().config(),
+              );
+            },
           );
         },
       ),

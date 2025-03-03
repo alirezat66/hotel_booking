@@ -21,6 +21,9 @@ class HotelBookingTheme {
   static const darkDividerColor = Color(0xFF424242);
   static const darkIconColor = Color(0xFFB0B0B0);
 
+  static ThemeData get lightTheme => getTheme(brightness: Brightness.light);
+  static ThemeData get darkTheme => getTheme(brightness: Brightness.dark);
+
   // Unified ThemeData getter
   static ThemeData getTheme({required Brightness brightness}) {
     final isDark = brightness == Brightness.dark;

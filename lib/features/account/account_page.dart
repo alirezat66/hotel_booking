@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
+import 'package:hotel_booking/features/account/bloc/theme_bloc.dart';
 
 @RoutePage()
 class AccountPage extends StatelessWidget {
@@ -54,6 +55,47 @@ class AccountPage extends StatelessWidget {
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text('selectTheme').tr(),
+                BlocBuilder<ThemeBloc, Brightness>(
+                  builder: (context, Brightness brightness) {
+                    return Row(
+                      children: [
+                        Row(
+                          children: [
+                            Radio<Brightness>(
+                              value: brightness,
+                              groupValue: Brightness.light,
+                              onChanged: (Brightness? value) {
+                                _setTheme(context, value!);
+                              },
+                            ),
+                            const Text('lightTheme').tr(),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Radio<Brightness>(
+                              value: brightness,
+                              groupValue: Brightness.dark,
+                              onChanged: (Brightness? value) {
+                                _setTheme(context, value!);
+                              },
+                            ),
+                            const Text('darkTheme').tr(),
+                          ],
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -63,5 +105,9 @@ class AccountPage extends StatelessWidget {
     context.read<LocaleBloc>().add(SetLocale(Locale(value)));
 
     context.setLocale(Locale(value));
+  }
+
+  void _setTheme(BuildContext context, Brightness brightness) {
+    context.read<ThemeBloc>().add(SetTheme(brightness));
   }
 }
