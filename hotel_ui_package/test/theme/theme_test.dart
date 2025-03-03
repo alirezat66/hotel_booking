@@ -14,7 +14,7 @@ void main() {
 
   group('HotelBookingTheme', () {
     test('lightTheme has correct color scheme', () {
-      final theme = HotelBookingTheme.lightTheme;
+      final theme = HotelBookingTheme.getTheme(brightness: Brightness.light);
       final colorScheme = theme.colorScheme;
 
       expect(colorScheme.brightness, Brightness.light);
@@ -29,7 +29,8 @@ void main() {
     });
 
     test('lightTheme has correct text theme', () {
-      final textTheme = HotelBookingTheme.lightTheme.textTheme;
+      final textTheme =
+          HotelBookingTheme.getTheme(brightness: Brightness.light).textTheme;
 
       expect(textTheme.displayLarge?.fontSize, 57);
       expect(textTheme.displayMedium?.fontSize, 45);
@@ -50,7 +51,9 @@ void main() {
 
     test('lightTheme has correct elevated button theme', () {
       final elevatedButtonTheme =
-          HotelBookingTheme.lightTheme.elevatedButtonTheme.style;
+          HotelBookingTheme.getTheme(brightness: Brightness.light)
+              .elevatedButtonTheme
+              .style;
 
       expect(elevatedButtonTheme?.backgroundColor?.resolve({}),
           HotelBookingTheme.lightPrimary);
@@ -64,7 +67,8 @@ void main() {
     });
 
     test('lightTheme has correct divider theme', () {
-      final dividerTheme = HotelBookingTheme.lightTheme.dividerTheme;
+      final dividerTheme =
+          HotelBookingTheme.getTheme(brightness: Brightness.light).dividerTheme;
 
       expect(dividerTheme.color, HotelBookingTheme.dividerColor);
       expect(dividerTheme.space, 0);
@@ -72,7 +76,7 @@ void main() {
     });
 
     test('lightTheme has correct rating badge theme', () {
-      final theme = HotelBookingTheme.lightTheme;
+      final theme = HotelBookingTheme.getTheme(brightness: Brightness.light);
       final ratingBadgeTheme = theme.extension<RatingBadgeTheme>()!;
 
       expect(ratingBadgeTheme.verySatisfiedColor, Colors.green);
@@ -84,7 +88,8 @@ void main() {
   });
 
   test('HotelCardTheme properties are correct', () {
-    final ThemeData theme = HotelBookingTheme.lightTheme;
+    final ThemeData theme =
+        HotelBookingTheme.getTheme(brightness: Brightness.light);
     final HotelCardTheme hotelCardTheme = theme.extension<HotelCardTheme>()!;
 
     expect(hotelCardTheme.titleTextColor, const Color(0xFF222222));

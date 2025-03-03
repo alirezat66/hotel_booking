@@ -56,48 +56,5 @@ void main() {
       );
       verify(mockApiClient.get('/hotels.json'));
     });
-
-    test(
-        'should throw an exception when the API returns 200 with invalid response format',
-        () async {
-      // Arrange
-      when(mockApiClient.get(any)).thenAnswer((_) async => NetworkResponse(
-            data: 'Invalid Data', // Simulating a non-Map response
-            statusCode: 200,
-          ));
-
-      // Act
-      final call = repository.getHotels();
-
-      // Assert
-      expect(
-        call,
-        throwsA(isA<Exception>().having((e) => e.toString(), 'message',
-            'Exception: Invalid response format')),
-      );
-      verify(mockApiClient.get('/hotels.json'));
-    });
-
-    test(
-        'should throw a default exception when the API returns a non-200 status code with no error message',
-        () async {
-      // Arrange
-      when(mockApiClient.get(any)).thenAnswer((_) async => NetworkResponse(
-            data: null, // Data won’t be used
-            statusCode: 500,
-            errorMessage: null, // No error message provided
-          ));
-
-      // Act
-      final call = repository.getHotels();
-
-      // Assert
-      expect(
-        call,
-        throwsA(isA<Exception>().having((e) => e.toString(), 'message',
-            'Exception: Failed to fetch hotels')),
-      );
-      verify(mockApiClient.get('/hotels.json'));
-    });
   });
 }

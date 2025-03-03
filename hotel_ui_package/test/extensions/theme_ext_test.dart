@@ -16,7 +16,7 @@ void main() {
         (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
-          theme: HotelBookingTheme.lightTheme,
+          theme: HotelBookingTheme.getTheme(brightness: Brightness.light),
           home: Builder(
             builder: (context) {
               // Test color scheme
@@ -63,7 +63,7 @@ void main() {
         (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
-          theme: HotelBookingTheme.lightTheme,
+          theme: HotelBookingTheme.getTheme(brightness: Brightness.light),
           home: Builder(
             builder: (context) {
               // Test icon theme
@@ -82,7 +82,7 @@ void main() {
         (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
-          theme: HotelBookingTheme.lightTheme,
+          theme: HotelBookingTheme.getTheme(brightness: Brightness.light),
           home: Builder(
             builder: (context) {
               final ratingBadgeTheme = context.ratingBadgeTheme;
@@ -104,7 +104,7 @@ void main() {
         (WidgetTester tester) async {
       await tester.pumpWidget(
         MaterialApp(
-          theme: HotelBookingTheme.lightTheme,
+          theme: HotelBookingTheme.getTheme(brightness: Brightness.light),
           home: Builder(
             builder: (context) {
               final hotelCardTheme = context.hotelCardTheme;

@@ -6,6 +6,7 @@ import 'package:hotel_booking/core/bloc/bloc_observer.dart';
 import 'package:hotel_booking/core/di/service_locator.dart';
 import 'package:hotel_booking/core/route/app_router.dart';
 import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
+import 'package:hotel_booking/features/account/bloc/theme_bloc.dart';
 import 'package:hotel_booking/features/favorite/cubit/favorite_cubit.dart';
 import 'package:hotel_booking/features/hotels/cubit/hotel_cubit.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
@@ -36,18 +37,34 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => locator<LocaleBloc>(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => locator<LocaleBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => locator<ThemeBloc>(),
+        ),
+      ],
       child: BlocBuilder<LocaleBloc, Locale>(
         builder: (context, locale) {
           context.setLocale(locale);
-          return MaterialApp.router(
-            title: 'Flutter Demo',
-            theme: HotelBookingTheme.lightTheme,
-            localizationsDelegates: context.localizationDelegates,
-            supportedLocales: context.supportedLocales,
-            locale: locale,
-            routerConfig: AppRouter().config(),
+          return BlocBuilder<ThemeBloc, Brightness>(
+            builder: (context, brightness) {
+              return MaterialApp.router(
+                title: 'Flutter Demo',
+                theme: HotelBookingTheme.getTheme(brightness: Brightness.light),
+                darkTheme:
+                    HotelBookingTheme.getTheme(brightness: Brightness.dark),
+                themeMode: brightness == Brightness.light
+                    ? ThemeMode.light
+                    : ThemeMode.dark,
+                localizationsDelegates: context.localizationDelegates,
+                supportedLocales: context.supportedLocales,
+                locale: locale,
+                routerConfig: AppRouter().config(),
+              );
+            },
           );
         },
       ),
@@ -56,20 +73,27 @@ class MyApp extends StatelessWidget {
 }
 
 @RoutePage()
-class MainTabsScreen extends StatelessWidget {
+class MainTabsScreen extends StatefulWidget {
   const MainTabsScreen({super.key});
-  static final List<String> _tabTitles = [
-    'overview'.tr(),
-    'hotels'.tr(),
-    'favorites'.tr(),
-    'account'.tr(),
+
+  @override
+  State<MainTabsScreen> createState() => _MainTabsScreenState();
+}
+
+class _MainTabsScreenState extends State<MainTabsScreen> {
+  final List<String> _tabTitles = [
+    'overview',
+    'hotels',
+    'favorites',
+    'account',
   ];
+
   @override
   Widget build(BuildContext context) {
     return AutoTabsRouter(
       routes: [
         const OverviewRoute(),
-        const HotelRoute(), // Pass your hotel list here later
+        const HotelRoute(),
         FavoriteRoute(),
         const AccountRoute(),
       ],
@@ -79,7 +103,7 @@ class MainTabsScreen extends StatelessWidget {
           appBar: AppBar(
             title: Text(
               _tabTitles[tabsRouter.activeIndex],
-            ),
+            ).tr(),
           ),
           body: MultiBlocProvider(
             providers: [
@@ -93,9 +117,7 @@ class MainTabsScreen extends StatelessWidget {
             child: child,
           ),
           bottomNavigationBar: BottomNavigationBar(
-            type: BottomNavigationBarType
-                .fixed, // Add this if not already present
-
+            type: BottomNavigationBarType.fixed,
             currentIndex: tabsRouter.activeIndex,
             onTap: (index) => tabsRouter.setActiveIndex(index),
             items: [
