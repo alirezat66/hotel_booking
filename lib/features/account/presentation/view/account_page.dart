@@ -2,8 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
-import 'package:hotel_booking/features/account/bloc/theme_bloc.dart';
+import 'package:hotel_booking/features/account/presentation/bloc/locale_bloc.dart';
+import 'package:hotel_booking/features/account/presentation/bloc/theme_bloc.dart';
 
 @RoutePage()
 class AccountPage extends StatelessWidget {

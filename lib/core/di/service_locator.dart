@@ -6,8 +6,8 @@ import 'package:hotel_booking/features/favorite/data/datasource/local_data_sourc
 import 'package:hotel_booking/core/network/api_client.dart';
 import 'package:hotel_booking/core/network/config/client_config.dart';
 import 'package:hotel_booking/core/network/dio_client.dart';
-import 'package:hotel_booking/features/account/bloc/locale_bloc.dart';
-import 'package:hotel_booking/features/account/bloc/theme_bloc.dart';
+import 'package:hotel_booking/features/account/presentation/bloc/locale_bloc.dart';
+import 'package:hotel_booking/features/account/presentation/bloc/theme_bloc.dart';
 import 'package:hotel_booking/features/favorite/data/repository/favorite_repository_impl.dart';
 import 'package:hotel_booking/features/favorite/domain/repository/favorite_repository.dart';
 import 'package:hotel_booking/features/favorite/domain/usecase/add_favorite_use_case.dart';

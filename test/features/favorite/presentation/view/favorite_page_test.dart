@@ -1,8 +1,7 @@
-/* import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hotel_booking/core/data/repository/favorite_repository.dart';
 import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
 import 'package:hotel_booking/features/favorite/data/model/hotel_favorite.dart';
 import 'package:hotel_booking/features/favorite/presentation/view/favorite_list_view.dart';
@@ -14,9 +13,9 @@ import 'package:mockito/mockito.dart';
 
 import 'favorite_page_test.mocks.dart';
 
+
 @GenerateNiceMocks([
   MockSpec<FavoriteCubit>(),
-  MockSpec<FavoriteRepository>(),
 ])
 void main() {
   // Define a simple SVG string for testing
@@ -96,4 +95,4 @@ void main() {
     expect(find.byType(FavoriteEmptyView), findsNothing);
   });
 }
- */
+ 

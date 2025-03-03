@@ -1,4 +1,4 @@
-/* import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
@@ -10,12 +10,15 @@ import 'package:hotel_booking/features/hotels/presentation/view/widgets/hotel_fa
 import 'package:hotel_booking/features/hotels/presentation/view/widgets/hotel_loading_widget.dart';
 import 'package:hotel_booking/features/hotels/presentation/view/widgets/hotel_success_widget.dart';
 import 'package:hotel_ui_package/hotel_ui_package.dart';
+import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../favorite/view/favorite_page_test.mocks.dart';
+import '../../../favorite/presentation/view/favorite_page_test.mocks.dart';
 import 'hotel_page_test.mocks.dart';
 
-// Define dummy value for HotelState
+@GenerateNiceMocks([
+  MockSpec<HotelCubit>(),
+])
 void main() {
   late MockHotelCubit mockHotelCubit;
   late MockFavoriteCubit mockFavoriteCubit;
@@ -148,4 +151,3 @@ void _setupMockitoDummies() {
   provideDummy<HotelSuccess>(HotelSuccess(dummyHotels, 0));
   provideDummy<HotelFailure>(HotelFailure('dummy error'));
 }
- */
