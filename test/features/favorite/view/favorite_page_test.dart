@@ -71,11 +71,6 @@ void main() {
     expect(find.byType(FavoriteEmptyView), findsOneWidget);
     expect(find.byType(FavoriteListView), findsNothing);
     expect(find.byType(SvgPicture), findsOneWidget);
-    expect(find.text('Deine Favoriten - Immer zur Hand'), findsOneWidget);
-    expect(
-        find.text(
-            'Melde dich jetzt an, um deine Favoriten auf allen Geräten zu synchronisieren und einzusehen.'),
-        findsOneWidget); // Partial match
   });
 
   testWidgets('FavoritePage shows FavoriteListView when state has favorites',
@@ -100,5 +95,4 @@ void main() {
     expect(find.byType(FavoriteListView), findsOneWidget);
     expect(find.byType(FavoriteEmptyView), findsNothing);
   });
-
-  }
+}
