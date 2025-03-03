@@ -14,6 +14,7 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           path: '/',
           page: MainTabsRoute.page,
+          initial: true,
           children: [
             AutoRoute(path: 'overview', page: OverviewRoute.page),
             AutoRoute(path: 'hotels', page: HotelRoute.page),

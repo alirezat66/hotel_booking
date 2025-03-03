@@ -5,7 +5,6 @@ part 'theme_event.dart';
 
 class ThemeBloc extends HydratedBloc<ThemeEvent, Brightness> {
   ThemeBloc() : super(Brightness.light) {
-    // Default to English
     on<SetTheme>((event, emit) {
       emit(event.brightness);
     });
@@ -13,12 +12,12 @@ class ThemeBloc extends HydratedBloc<ThemeEvent, Brightness> {
 
   @override
   Brightness? fromJson(Map<String, dynamic> json) {
-    final brightness = json['brightness'] as bool?;
-    return (brightness ?? false) ? Brightness.light : Brightness.dark;
+    final isDark = json['isDark'] as bool?;
+    return isDark == true ? Brightness.dark : Brightness.light;
   }
 
   @override
   Map<String, dynamic>? toJson(Brightness state) {
-    return {'locale': state != Brightness.light};
+    return {'isDark': state == Brightness.dark};
   }
 }

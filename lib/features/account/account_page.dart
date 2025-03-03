@@ -61,37 +61,39 @@ class AccountPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const Text('selectTheme').tr(),
-                BlocBuilder<ThemeBloc, Brightness>(
-                  builder: (context, Brightness brightness) {
-                    return Row(
-                      children: [
-                        Row(
-                          children: [
-                            Radio<Brightness>(
-                              value: brightness,
-                              groupValue: Brightness.light,
-                              onChanged: (Brightness? value) {
-                                _setTheme(context, value!);
-                              },
-                            ),
-                            const Text('lightTheme').tr(),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Radio<Brightness>(
-                              value: brightness,
-                              groupValue: Brightness.dark,
-                              onChanged: (Brightness? value) {
-                                _setTheme(context, value!);
-                              },
-                            ),
-                            const Text('darkTheme').tr(),
-                          ],
-                        ),
-                      ],
-                    );
-                  },
+                Expanded(
+                  child: BlocBuilder<ThemeBloc, Brightness>(
+                    builder: (context, brightness) {
+                      return Wrap(
+                        children: [
+                          Row(
+                            children: [
+                              Radio<Brightness>(
+                                value: Brightness.light,
+                                groupValue: brightness,
+                                onChanged: (Brightness? value) {
+                                  _setTheme(context, value!);
+                                },
+                              ),
+                              const Text('lightTheme').tr(),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio<Brightness>(
+                                value: Brightness.dark,
+                                groupValue: brightness,
+                                onChanged: (Brightness? value) {
+                                  _setTheme(context, value!);
+                                },
+                              ),
+                              const Text('darkTheme').tr(),
+                            ],
+                          ),
+                        ],
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
@@ -103,7 +105,6 @@ class AccountPage extends StatelessWidget {
 
   void _setLanguage(BuildContext context, String value) {
     context.read<LocaleBloc>().add(SetLocale(Locale(value)));
-
     context.setLocale(Locale(value));
   }
 

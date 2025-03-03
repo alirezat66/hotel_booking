@@ -70,6 +70,6 @@ class ServiceLocator {
     );
     locator.registerFactory<LocaleBloc>(() => LocaleBloc());
 
-    locator.registerLazySingleton(() => locator<ThemeBloc>().state);
+    locator.registerFactory<ThemeBloc>(() => ThemeBloc());
   }
 }
