@@ -1,4 +1,4 @@
-/* import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hotel_booking/features/favorite/presentation/cubit/favorite_cubit.dart';
@@ -151,4 +151,3 @@ void _setupMockitoDummies() {
   provideDummy<HotelSuccess>(HotelSuccess(dummyHotels, 0));
   provideDummy<HotelFailure>(HotelFailure('dummy error'));
 }
- */
